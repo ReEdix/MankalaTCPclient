@@ -94,9 +94,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\Mankala.jpg" />
-  </ItemGroup>
   <ItemGroup />
   <ItemGroup>
     <None Include="Properties\Images\mankala.png" />
