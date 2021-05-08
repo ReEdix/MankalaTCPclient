@@ -51,9 +51,10 @@ namespace TCPclient
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(12, 22);
+            this.exitButton.Location = new System.Drawing.Point(16, 27);
+            this.exitButton.Margin = new System.Windows.Forms.Padding(4);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(75, 23);
+            this.exitButton.Size = new System.Drawing.Size(100, 28);
             this.exitButton.TabIndex = 1;
             this.exitButton.Text = "EXIT";
             this.exitButton.UseVisualStyleBackColor = true;
@@ -62,9 +63,10 @@ namespace TCPclient
             // statusLabel
             // 
             this.statusLabel.AutoSize = true;
-            this.statusLabel.Location = new System.Drawing.Point(105, 22);
+            this.statusLabel.Location = new System.Drawing.Point(140, 27);
+            this.statusLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.statusLabel.Name = "statusLabel";
-            this.statusLabel.Size = new System.Drawing.Size(150, 13);
+            this.statusLabel.Size = new System.Drawing.Size(190, 17);
             this.statusLabel.TabIndex = 2;
             this.statusLabel.Text = "CZEKANIE NA ZAWARTOŚĆ";
             // 
@@ -72,76 +74,95 @@ namespace TCPclient
             // 
             this.whiteLabel0.AutoSize = true;
             this.whiteLabel0.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.whiteLabel0.Location = new System.Drawing.Point(260, 551);
+            this.whiteLabel0.Location = new System.Drawing.Point(347, 678);
+            this.whiteLabel0.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.whiteLabel0.Name = "whiteLabel0";
-            this.whiteLabel0.Size = new System.Drawing.Size(31, 32);
+            this.whiteLabel0.Size = new System.Drawing.Size(37, 40);
             this.whiteLabel0.TabIndex = 3;
             this.whiteLabel0.Text = "4";
             this.whiteLabel0.Click += new System.EventHandler(this.whiteLabel0_Click);
+            this.whiteLabel0.MouseEnter += new System.EventHandler(this.whiteLabel0_Enter);
+            this.whiteLabel0.MouseLeave += new System.EventHandler(this.whiteLabel0_Leave);
             // 
             // whiteLabel1
             // 
             this.whiteLabel1.AutoSize = true;
             this.whiteLabel1.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.whiteLabel1.Location = new System.Drawing.Point(361, 551);
+            this.whiteLabel1.Location = new System.Drawing.Point(481, 678);
+            this.whiteLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.whiteLabel1.Name = "whiteLabel1";
-            this.whiteLabel1.Size = new System.Drawing.Size(31, 32);
+            this.whiteLabel1.Size = new System.Drawing.Size(37, 40);
             this.whiteLabel1.TabIndex = 4;
             this.whiteLabel1.Text = "4";
             this.whiteLabel1.Click += new System.EventHandler(this.whiteLabel1_Click);
+            this.whiteLabel1.MouseEnter += new System.EventHandler(this.whiteLabel1_Enter);
+            this.whiteLabel1.MouseLeave += new System.EventHandler(this.whiteLabel1_Leave);
             // 
             // whiteLabel2
             // 
             this.whiteLabel2.AutoSize = true;
             this.whiteLabel2.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.whiteLabel2.Location = new System.Drawing.Point(465, 551);
+            this.whiteLabel2.Location = new System.Drawing.Point(620, 678);
+            this.whiteLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.whiteLabel2.Name = "whiteLabel2";
-            this.whiteLabel2.Size = new System.Drawing.Size(31, 32);
+            this.whiteLabel2.Size = new System.Drawing.Size(37, 40);
             this.whiteLabel2.TabIndex = 5;
             this.whiteLabel2.Text = "4";
             this.whiteLabel2.Click += new System.EventHandler(this.whiteLabel2_Click);
+            this.whiteLabel2.MouseEnter += new System.EventHandler(this.whiteLabel2_Enter);
+            this.whiteLabel2.MouseLeave += new System.EventHandler(this.whiteLabel2_Leave);
             // 
             // whiteLabel3
             // 
             this.whiteLabel3.AutoSize = true;
             this.whiteLabel3.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.whiteLabel3.Location = new System.Drawing.Point(582, 551);
+            this.whiteLabel3.Location = new System.Drawing.Point(776, 678);
+            this.whiteLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.whiteLabel3.Name = "whiteLabel3";
-            this.whiteLabel3.Size = new System.Drawing.Size(31, 32);
+            this.whiteLabel3.Size = new System.Drawing.Size(37, 40);
             this.whiteLabel3.TabIndex = 6;
             this.whiteLabel3.Text = "4";
             this.whiteLabel3.Click += new System.EventHandler(this.whiteLabel3_Click);
+            this.whiteLabel3.MouseEnter += new System.EventHandler(this.whiteLabel3_Enter);
+            this.whiteLabel3.MouseLeave += new System.EventHandler(this.whiteLabel3_Leave);
             // 
             // whiteLabel4
             // 
             this.whiteLabel4.AutoSize = true;
             this.whiteLabel4.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.whiteLabel4.Location = new System.Drawing.Point(691, 551);
+            this.whiteLabel4.Location = new System.Drawing.Point(921, 678);
+            this.whiteLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.whiteLabel4.Name = "whiteLabel4";
-            this.whiteLabel4.Size = new System.Drawing.Size(31, 32);
+            this.whiteLabel4.Size = new System.Drawing.Size(37, 40);
             this.whiteLabel4.TabIndex = 7;
             this.whiteLabel4.Text = "4";
             this.whiteLabel4.Click += new System.EventHandler(this.whiteLabel4_Click);
+            this.whiteLabel4.MouseEnter += new System.EventHandler(this.whiteLabel4_Enter);
+            this.whiteLabel4.MouseLeave += new System.EventHandler(this.whiteLabel4_Leave);
             // 
             // whiteLabel5
             // 
             this.whiteLabel5.AutoSize = true;
             this.whiteLabel5.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.whiteLabel5.Location = new System.Drawing.Point(801, 551);
+            this.whiteLabel5.Location = new System.Drawing.Point(1068, 678);
+            this.whiteLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.whiteLabel5.Name = "whiteLabel5";
-            this.whiteLabel5.Size = new System.Drawing.Size(31, 32);
+            this.whiteLabel5.Size = new System.Drawing.Size(37, 40);
             this.whiteLabel5.TabIndex = 8;
             this.whiteLabel5.Text = "4";
             this.whiteLabel5.Click += new System.EventHandler(this.whiteLabel5_Click);
+            this.whiteLabel5.MouseEnter += new System.EventHandler(this.whiteLabel5_Enter);
+            this.whiteLabel5.MouseLeave += new System.EventHandler(this.whiteLabel5_Leave);
             // 
             // whiteLabel6
             // 
             this.whiteLabel6.AutoSize = true;
             this.whiteLabel6.BackColor = System.Drawing.Color.Transparent;
             this.whiteLabel6.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.whiteLabel6.Location = new System.Drawing.Point(950, 325);
+            this.whiteLabel6.Location = new System.Drawing.Point(1267, 400);
+            this.whiteLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.whiteLabel6.Name = "whiteLabel6";
-            this.whiteLabel6.Size = new System.Drawing.Size(32, 32);
+            this.whiteLabel6.Size = new System.Drawing.Size(38, 40);
             this.whiteLabel6.TabIndex = 9;
             this.whiteLabel6.Text = "0";
             // 
@@ -149,94 +170,115 @@ namespace TCPclient
             // 
             this.blackLabel0.AutoSize = true;
             this.blackLabel0.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blackLabel0.Location = new System.Drawing.Point(801, 109);
+            this.blackLabel0.Location = new System.Drawing.Point(1068, 134);
+            this.blackLabel0.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.blackLabel0.Name = "blackLabel0";
-            this.blackLabel0.Size = new System.Drawing.Size(31, 32);
+            this.blackLabel0.Size = new System.Drawing.Size(37, 40);
             this.blackLabel0.TabIndex = 10;
             this.blackLabel0.Text = "4";
             this.blackLabel0.Click += new System.EventHandler(this.blackLabel0_Click);
+            this.blackLabel0.MouseEnter += new System.EventHandler(this.blackLabel0_Enter);
+            this.blackLabel0.MouseLeave += new System.EventHandler(this.blackLabel0_Leave);
             // 
             // blackLabel1
             // 
             this.blackLabel1.AutoSize = true;
             this.blackLabel1.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blackLabel1.Location = new System.Drawing.Point(691, 109);
+            this.blackLabel1.Location = new System.Drawing.Point(921, 134);
+            this.blackLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.blackLabel1.Name = "blackLabel1";
-            this.blackLabel1.Size = new System.Drawing.Size(31, 32);
+            this.blackLabel1.Size = new System.Drawing.Size(37, 40);
             this.blackLabel1.TabIndex = 11;
             this.blackLabel1.Text = "4";
             this.blackLabel1.Click += new System.EventHandler(this.blackLabel1_Click);
+            this.blackLabel1.MouseEnter += new System.EventHandler(this.blackLabel1_Enter);
+            this.blackLabel1.MouseLeave += new System.EventHandler(this.blackLabel1_Leave);
             // 
             // blackLabel2
             // 
             this.blackLabel2.AutoSize = true;
             this.blackLabel2.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blackLabel2.Location = new System.Drawing.Point(582, 109);
+            this.blackLabel2.Location = new System.Drawing.Point(776, 134);
+            this.blackLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.blackLabel2.Name = "blackLabel2";
-            this.blackLabel2.Size = new System.Drawing.Size(31, 32);
+            this.blackLabel2.Size = new System.Drawing.Size(37, 40);
             this.blackLabel2.TabIndex = 12;
             this.blackLabel2.Text = "4";
             this.blackLabel2.Click += new System.EventHandler(this.blackLabel2_Click);
+            this.blackLabel2.MouseEnter += new System.EventHandler(this.blackLabel2_Enter);
+            this.blackLabel2.MouseLeave += new System.EventHandler(this.blackLabel2_Leave);
             // 
             // blackLabel3
             // 
             this.blackLabel3.AutoSize = true;
             this.blackLabel3.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blackLabel3.Location = new System.Drawing.Point(465, 109);
+            this.blackLabel3.Location = new System.Drawing.Point(620, 134);
+            this.blackLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.blackLabel3.Name = "blackLabel3";
-            this.blackLabel3.Size = new System.Drawing.Size(31, 32);
+            this.blackLabel3.Size = new System.Drawing.Size(37, 40);
             this.blackLabel3.TabIndex = 13;
             this.blackLabel3.Text = "4";
             this.blackLabel3.Click += new System.EventHandler(this.blackLabel3_Click);
+            this.blackLabel3.MouseEnter += new System.EventHandler(this.blackLabel3_Enter);
+            this.blackLabel3.MouseLeave += new System.EventHandler(this.blackLabel3_Leave);
             // 
             // blackLabel4
             // 
             this.blackLabel4.AutoSize = true;
             this.blackLabel4.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.blackLabel4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.blackLabel4.Location = new System.Drawing.Point(361, 109);
+            this.blackLabel4.Location = new System.Drawing.Point(481, 134);
+            this.blackLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.blackLabel4.Name = "blackLabel4";
-            this.blackLabel4.Size = new System.Drawing.Size(31, 32);
+            this.blackLabel4.Size = new System.Drawing.Size(37, 40);
             this.blackLabel4.TabIndex = 14;
             this.blackLabel4.Text = "4";
             this.blackLabel4.Click += new System.EventHandler(this.blackLabel4_Click);
+            this.blackLabel4.MouseEnter += new System.EventHandler(this.blackLabel4_Enter);
+            this.blackLabel4.MouseLeave += new System.EventHandler(this.blackLabel4_Leave);
             // 
             // blackLabel5
             // 
             this.blackLabel5.AutoSize = true;
             this.blackLabel5.BackColor = System.Drawing.Color.Transparent;
             this.blackLabel5.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blackLabel5.Location = new System.Drawing.Point(260, 109);
+            this.blackLabel5.Location = new System.Drawing.Point(347, 134);
+            this.blackLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.blackLabel5.Name = "blackLabel5";
-            this.blackLabel5.Size = new System.Drawing.Size(31, 32);
+            this.blackLabel5.Size = new System.Drawing.Size(37, 40);
             this.blackLabel5.TabIndex = 15;
             this.blackLabel5.Text = "4";
             this.blackLabel5.Click += new System.EventHandler(this.blackLabel5_Click);
+            this.blackLabel5.MouseEnter += new System.EventHandler(this.blackLabel5_Enter);
+            this.blackLabel5.MouseLeave += new System.EventHandler(this.blackLabel5_Leave);
             // 
             // blackLabel6
             // 
             this.blackLabel6.AutoSize = true;
             this.blackLabel6.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blackLabel6.Location = new System.Drawing.Point(102, 325);
+            this.blackLabel6.Location = new System.Drawing.Point(136, 400);
+            this.blackLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.blackLabel6.Name = "blackLabel6";
-            this.blackLabel6.Size = new System.Drawing.Size(32, 32);
+            this.blackLabel6.Size = new System.Drawing.Size(38, 40);
             this.blackLabel6.TabIndex = 16;
             this.blackLabel6.Text = "0";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 63);
+            this.pictureBox1.Image = global::TCPclient.Properties.Resources.mankala;
+            this.pictureBox1.Location = new System.Drawing.Point(16, 78);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1073, 554);
+            this.pictureBox1.Size = new System.Drawing.Size(1431, 682);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // GameForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1101, 629);
+            this.ClientSize = new System.Drawing.Size(1468, 774);
             this.Controls.Add(this.blackLabel6);
             this.Controls.Add(this.blackLabel5);
             this.Controls.Add(this.blackLabel4);
@@ -254,6 +296,7 @@ namespace TCPclient
             this.Controls.Add(this.statusLabel);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GameForm";
             this.Text = "GameForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -38,7 +38,7 @@ namespace TCPclient
             labelList.Add(blackLabel5);
             labelList.Add(blackLabel6);
 
-            
+
             foreach (Label l in labelList)
             {
                 l.Location = pictureBox1.PointToClient(l.Parent.PointToScreen(l.Location));
@@ -48,8 +48,8 @@ namespace TCPclient
 
             if (playerColor.Equals("BLACK"))
             {
-                foreach(Label l in labelList)
-                {                 
+                foreach (Label l in labelList)
+                {
                     l.Enabled = false;
                 }
 
@@ -57,12 +57,12 @@ namespace TCPclient
             }
             else
             {
-                for(int i=7; i<14; i++)
+                for (int i = 7; i < 14; i++)
                 {
                     labelList[i].Enabled = false;
                 }
                 statusLabel.Text = "TWOJA TURA";
-            }     
+            }
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -94,11 +94,11 @@ namespace TCPclient
                     {
                         if (playerColor.Equals("BLACK"))
                         {
-                            if (Int32.Parse(labelList[13 - 1 - ((labelIndex + labelIndexValue)%7)].Text) != 0)
+                            if (Int32.Parse(labelList[13 - 1 - ((labelIndex + labelIndexValue) % 7)].Text) != 0)
                             {
                                 labelList[(labelIndex + labelIndexValue) % 14].Text = "0";
 
-                                labelList[6].Text = (Int32.Parse(labelList[6].Text) + 1 + Int32.Parse(labelList[13 - 1 - ((labelIndex + labelIndexValue)%7)].Text)).ToString();
+                                labelList[6].Text = (Int32.Parse(labelList[6].Text) + 1 + Int32.Parse(labelList[13 - 1 - ((labelIndex + labelIndexValue) % 7)].Text)).ToString();
                                 labelList[Math.Abs(13 - 1 - ((labelIndex + labelIndexValue) % 7))].Text = "0";
 
                                 break;
@@ -106,11 +106,11 @@ namespace TCPclient
                         }
                         else
                         {
-                            if (Int32.Parse(labelList[6 - 1 - ((labelIndex + labelIndexValue)%7)].Text) != 0)
+                            if (Int32.Parse(labelList[6 - 1 - ((labelIndex + labelIndexValue) % 7)].Text) != 0)
                             {
                                 labelList[(labelIndex + labelIndexValue) % 14].Text = "0";
 
-                                labelList[13].Text = (Int32.Parse(labelList[13].Text) + 1 + Int32.Parse(labelList[6 - 1 - ((labelIndex + labelIndexValue)%7)].Text)).ToString();
+                                labelList[13].Text = (Int32.Parse(labelList[13].Text) + 1 + Int32.Parse(labelList[6 - 1 - ((labelIndex + labelIndexValue) % 7)].Text)).ToString();
                                 labelList[Math.Abs(6 - 1 - ((labelIndex + labelIndexValue) % 7))].Text = "0";
 
                                 break;
@@ -159,9 +159,9 @@ namespace TCPclient
 
             labelList[labelIndex].Text = "0";
 
-            if(playerColor.Equals("WHITE"))
+            if (playerColor.Equals("WHITE"))
             {
-                for(int i = 0; i<7; i++)
+                for (int i = 0; i < 7; i++)
                 {
                     labelList[i].Enabled = true;
                 }
@@ -200,11 +200,11 @@ namespace TCPclient
                     {
                         if (playerColor.Equals("WHITE"))
                         {
-                            if (Int32.Parse(labelList[13 - 1 - ((labelIndex + labelIndexValue)%7)].Text) != 0)
+                            if (Int32.Parse(labelList[13 - 1 - ((labelIndex + labelIndexValue) % 7)].Text) != 0)
                             {
                                 labelList[(labelIndex + labelIndexValue) % 14].Text = "0";
 
-                                labelList[6].Text = (Int32.Parse(labelList[6].Text) + 1 + Int32.Parse(labelList[13 - 1 - ((labelIndex + labelIndexValue)%7)].Text)).ToString();
+                                labelList[6].Text = (Int32.Parse(labelList[6].Text) + 1 + Int32.Parse(labelList[13 - 1 - ((labelIndex + labelIndexValue) % 7)].Text)).ToString();
                                 labelList[Math.Abs(13 - 1 - ((labelIndex + labelIndexValue) % 7))].Text = "0";
 
                                 break;
@@ -212,27 +212,27 @@ namespace TCPclient
                         }
                         else
                         {
-                            if (Int32.Parse(labelList[6 - 1 - ((labelIndex + labelIndexValue)%7)].Text) != 0)
+                            if (Int32.Parse(labelList[6 - 1 - ((labelIndex + labelIndexValue) % 7)].Text) != 0)
                             {
                                 labelList[(labelIndex + labelIndexValue) % 14].Text = "0";
 
-                                labelList[13].Text = (Int32.Parse(labelList[13].Text) + 1 + Int32.Parse(labelList[6 - 1 - ((labelIndex + labelIndexValue)%7)].Text)).ToString();
+                                labelList[13].Text = (Int32.Parse(labelList[13].Text) + 1 + Int32.Parse(labelList[6 - 1 - ((labelIndex + labelIndexValue) % 7)].Text)).ToString();
                                 labelList[Math.Abs(6 - 1 - ((labelIndex + labelIndexValue) % 7))].Text = "0";
 
                                 break;
                             }
                         }
-                    }               
+                    }
                 }
                 //###CAPTURE###
 
-                if(((labelIndex + i) % 14) !=6 && ((labelIndex + i) % 14) != 13)
+                if (((labelIndex + i) % 14) != 6 && ((labelIndex + i) % 14) != 13)
                 {
                     labelList[(labelIndex + i) % 14].Text = (Int32.Parse(labelList[(labelIndex + i) % 14].Text) + 1).ToString();
                 }
-                else if(((labelIndex + i) % 14) == 6)
+                else if (((labelIndex + i) % 14) == 6)
                 {
-                    if(playerColor.Equals("WHITE"))
+                    if (playerColor.Equals("WHITE"))
                     {
                         labelList[(labelIndex + i) % 14].Text = (Int32.Parse(labelList[(labelIndex + i) % 14].Text) + 1).ToString();
                     }
@@ -241,7 +241,7 @@ namespace TCPclient
                         iMaxValue++;
                     }
                 }
-                else if(((labelIndex + i) % 14) == 13)
+                else if (((labelIndex + i) % 14) == 13)
                 {
                     if (playerColor.Equals("BLACK"))
                     {
@@ -254,7 +254,7 @@ namespace TCPclient
                 }
             }
 
-            
+
             if ((labelIndex + labelIndexValue) % 14 == 6 || (labelIndex + labelIndexValue) % 14 == 13)//###EXTRA MOVE###
             {
                 mainForm.client.Send(Messages.Client.Move + $":{labelIndex}");
@@ -329,6 +329,284 @@ namespace TCPclient
         private void blackLabel5_Click(object sender, EventArgs e)
         {
             yourMove(12);
+        }
+
+
+
+        /// <summary>
+        ///              Changing color
+        /// </summary>
+        /// 
+        private void setAllBlack()
+        {
+            foreach (Label l in labelList)
+            {
+                l.ForeColor = Color.Black;
+            }
+        }
+        private void setAllEnabled()
+        {
+            foreach (Label l in labelList)
+            {
+                l.Enabled = true;
+            }
+        }
+        private void setDisabledBlack()
+        {
+            foreach (Label l in labelList)
+            {
+                if (l.Name.Substring(0, 5) == "black")
+                {
+                    l.Enabled = false;
+                }
+            }
+        }
+        private void setDisabledWhite()
+        {
+            foreach (Label l in labelList)
+            {
+                if (l.Name.Substring(0, 5) == "white")
+                {
+                    l.Enabled = false;
+                }
+            }
+        }
+        /*private void setColorWhite2(int labelNumber, int textNumber)
+        {
+            setAllEnabled();
+            int count = 0;
+            int maxValue = labelNumber + textNumber;
+            int newCount=0;
+            foreach (Label l in labelList)
+            {
+                if (count > labelNumber && count <= maxValue)
+                {
+                    newCount += 1;
+                    if ((labelNumber + newCount) % 14 == 13)
+                    {
+                        l.ForeColor = Color.Black;
+                        maxValue++;
+                    }
+                    l.ForeColor = System.Drawing.ColorTranslator.FromHtml("#00CF91");
+                }
+                if (count > labelNumber + textNumber)
+                {
+                    break;
+                }
+                count++;
+            }
+        }*/
+        private void setColorWhite(int labelIndex, int labelTextNumber)
+        {
+            setAllEnabled();
+            int maxValue = labelIndex + labelTextNumber;
+            for (int i = labelIndex+1; i <= maxValue; i++)
+            {
+                if (i % 14 == 13)
+                {
+                    labelList[i].ForeColor = Color.Black;
+                    maxValue++;
+                }
+                else
+                {
+                    labelList[i%14].ForeColor = System.Drawing.ColorTranslator.FromHtml("#00CF91");
+                }
+            }
+        }
+
+        private void setColorBlack(int labelIndex, int labelTextNumber)
+        {
+            setAllEnabled();
+            int maxValue = labelIndex + labelTextNumber;
+            for (int i = labelIndex + 1; i <= maxValue; i++)
+            {
+                if (i % 14 == 6)
+                {
+                    labelList[i].ForeColor = Color.Black;
+                    maxValue++;
+                }
+                else
+                {
+                    labelList[i % 14].ForeColor = System.Drawing.ColorTranslator.FromHtml("#00CF91");
+                }
+            }
+        }
+
+
+
+
+        // White enter
+
+
+
+        private void whiteLabel0_Enter(object sender, EventArgs e)
+        {
+            //text on label | number of label
+            int textNumber = Int32.Parse(whiteLabel0.Text);  // change
+            int labelNumber = 0;                             // change
+            setColorWhite(labelNumber, textNumber);
+        }
+        private void whiteLabel1_Enter(object sender, EventArgs e)
+        {
+            int textNumber = Int32.Parse(whiteLabel1.Text);  
+            int labelNumber = 1;                             
+            setColorWhite(labelNumber, textNumber);
+        }
+
+        private void whiteLabel2_Enter(object sender, EventArgs e)
+        {
+            int textNumber = Int32.Parse(whiteLabel2.Text);
+            int labelNumber = 2;
+            setColorWhite(labelNumber, textNumber);
+        }
+
+        private void whiteLabel3_Enter(object sender, EventArgs e)
+        {
+            int textNumber = Int32.Parse(whiteLabel3.Text);
+            int labelNumber = 3;
+            setColorWhite(labelNumber, textNumber);
+        }
+
+        private void whiteLabel4_Enter(object sender, EventArgs e)
+        {
+            int textNumber = Int32.Parse(whiteLabel4.Text);
+            int labelNumber = 4;
+            setColorWhite(labelNumber, textNumber);
+        }
+        private void whiteLabel5_Enter(object sender, EventArgs e)
+        {
+            int labelNumber = 5;                            
+            int textNumber = Int32.Parse(whiteLabel5.Text);  
+            setColorWhite(labelNumber,textNumber);
+        }
+
+
+
+       // White leave
+
+
+
+        private void whiteLabel0_Leave(object sender, EventArgs e)
+        {
+            setAllBlack();
+        }
+        private void whiteLabel1_Leave(object sender, EventArgs e)
+        {
+            setAllBlack();
+            setDisabledBlack();
+        }
+
+        private void whiteLabel2_Leave(object sender, EventArgs e)
+        {
+            setAllBlack();
+            setDisabledBlack();
+        }
+
+        private void whiteLabel3_Leave(object sender, EventArgs e)
+        {
+            setAllBlack();
+            setDisabledBlack();
+        }
+
+        private void whiteLabel4_Leave(object sender, EventArgs e)
+        {
+            setAllBlack();
+            setDisabledBlack();
+        }
+
+        private void whiteLabel5_Leave(object sender, EventArgs e)
+        {
+            setAllBlack();
+            setDisabledBlack();
+        }
+
+
+
+
+
+        // Black Label Enter
+
+
+        private void blackLabel0_Enter(object sender, EventArgs e)
+        {
+            int labelNumber = 7;
+            int textNumber = Int32.Parse(blackLabel0.Text);
+            setColorBlack(labelNumber, textNumber);
+        }
+
+        private void blackLabel1_Enter(object sender, EventArgs e)
+        {
+            int labelNumber = 8;
+            int textNumber = Int32.Parse(blackLabel1.Text);
+            setColorBlack(labelNumber, textNumber);
+        }
+
+        private void blackLabel2_Enter(object sender, EventArgs e)
+        {
+            int labelNumber = 9;
+            int textNumber = Int32.Parse(blackLabel2.Text);
+            setColorBlack(labelNumber, textNumber);
+        }
+
+        private void blackLabel3_Enter(object sender, EventArgs e)
+        {
+            int labelNumber = 10;
+            int textNumber = Int32.Parse(blackLabel3.Text);
+            setColorBlack(labelNumber, textNumber);
+        }
+
+        private void blackLabel4_Enter(object sender, EventArgs e)
+        {
+            int labelNumber = 11;
+            int textNumber = Int32.Parse(blackLabel4.Text);
+            setColorBlack(labelNumber, textNumber);
+        }
+
+        private void blackLabel5_Enter(object sender, EventArgs e)
+        {
+            int labelNumber = 12;
+            int textNumber = Int32.Parse(blackLabel5.Text);
+            setColorBlack(labelNumber, textNumber);
+        }
+
+
+        /// Black Label Leave
+
+
+        private void blackLabel0_Leave(object sender, EventArgs e)
+        {
+            setAllBlack();
+            setDisabledWhite();
+        }
+
+        private void blackLabel1_Leave(object sender, EventArgs e)
+        {
+            setAllBlack();
+            setDisabledWhite();
+        }
+
+        private void blackLabel2_Leave(object sender, EventArgs e)
+        {
+            setAllBlack();
+            setDisabledWhite();
+        }
+
+        private void blackLabel3_Leave(object sender, EventArgs e)
+        {
+            setAllBlack();
+            setDisabledWhite();
+        }
+
+        private void blackLabel4_Leave(object sender, EventArgs e)
+        {
+            setAllBlack();
+            setDisabledWhite();
+        }
+
+        private void blackLabel5_Leave(object sender, EventArgs e)
+        {
+            setAllBlack();
+            setDisabledWhite();
         }
     }
 }
