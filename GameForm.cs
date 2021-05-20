@@ -69,7 +69,6 @@ namespace TCPclient
         {
             mainForm.client.Send(Messages.Client.Exit);
         }
-
         public void enemyMoveFromServer(int labelIndex)
         {
             int iMaxValue = Int32.Parse(labelList[labelIndex].Text);
@@ -174,8 +173,6 @@ namespace TCPclient
                 }
             }
         }
-
-
         private void yourMove(int labelIndex)
         {
             int iMaxValue = Int32.Parse(labelList[labelIndex].Text);
@@ -276,6 +273,7 @@ namespace TCPclient
         {
             yourMove(0);
         }
+
         private void whiteLabel1_Click(object sender, EventArgs e)
         {
             yourMove(1);
@@ -333,10 +331,7 @@ namespace TCPclient
 
 
 
-        /// <summary>
-        ///              Changing color
-        /// </summary>
-        /// 
+       
         private void setAllBlack()
         {
             foreach (Label l in labelList)
@@ -344,6 +339,7 @@ namespace TCPclient
                 l.ForeColor = Color.Black;
             }
         }
+
         private void setAllEnabled()
         {
             foreach (Label l in labelList)
@@ -351,6 +347,7 @@ namespace TCPclient
                 l.Enabled = true;
             }
         }
+
         private void setDisabledBlack()
         {
             foreach (Label l in labelList)
@@ -361,6 +358,7 @@ namespace TCPclient
                 }
             }
         }
+
         private void setDisabledWhite()
         {
             foreach (Label l in labelList)
@@ -371,31 +369,7 @@ namespace TCPclient
                 }
             }
         }
-        /*private void setColorWhite2(int labelNumber, int textNumber)
-        {
-            setAllEnabled();
-            int count = 0;
-            int maxValue = labelNumber + textNumber;
-            int newCount=0;
-            foreach (Label l in labelList)
-            {
-                if (count > labelNumber && count <= maxValue)
-                {
-                    newCount += 1;
-                    if ((labelNumber + newCount) % 14 == 13)
-                    {
-                        l.ForeColor = Color.Black;
-                        maxValue++;
-                    }
-                    l.ForeColor = System.Drawing.ColorTranslator.FromHtml("#00CF91");
-                }
-                if (count > labelNumber + textNumber)
-                {
-                    break;
-                }
-                count++;
-            }
-        }*/
+
         private void setColorWhite(int labelIndex, int labelTextNumber)
         {
             setAllEnabled();
@@ -435,9 +409,6 @@ namespace TCPclient
 
 
 
-        // White enter
-
-
 
         private void whiteLabel0_Enter(object sender, EventArgs e)
         {
@@ -473,6 +444,7 @@ namespace TCPclient
             int labelNumber = 4;
             setColorWhite(labelNumber, textNumber);
         }
+
         private void whiteLabel5_Enter(object sender, EventArgs e)
         {
             int labelNumber = 5;                            
@@ -480,16 +452,11 @@ namespace TCPclient
             setColorWhite(labelNumber,textNumber);
         }
 
-
-
-       // White leave
-
-
-
         private void whiteLabel0_Leave(object sender, EventArgs e)
         {
             setAllBlack();
         }
+
         private void whiteLabel1_Leave(object sender, EventArgs e)
         {
             setAllBlack();
@@ -519,13 +486,6 @@ namespace TCPclient
             setAllBlack();
             setDisabledBlack();
         }
-
-
-
-
-
-        // Black Label Enter
-
 
         private void blackLabel0_Enter(object sender, EventArgs e)
         {
@@ -568,10 +528,6 @@ namespace TCPclient
             int textNumber = Int32.Parse(blackLabel5.Text);
             setColorBlack(labelNumber, textNumber);
         }
-
-
-        /// Black Label Leave
-
 
         private void blackLabel0_Leave(object sender, EventArgs e)
         {
