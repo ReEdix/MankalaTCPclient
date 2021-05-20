@@ -94,9 +94,35 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Properties\Images\01.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Properties\Images\mankala.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\07.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\08.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\00.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
