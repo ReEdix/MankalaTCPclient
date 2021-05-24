@@ -9,10 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TCPclient
-{
+{  
     public partial class GameForm : Form
     {
         List<Label> labelList;
+        List<PictureBox> pictureBoxList;
+        List<Image> imageList;
         string playerColor;
         MainForm mainForm;
         public GameForm(string playerColor, MainForm mainForm)
@@ -38,7 +40,6 @@ namespace TCPclient
             labelList.Add(blackLabel5);
             labelList.Add(blackLabel6);
 
-
             foreach (Label l in labelList)
             {
                 l.Location = pictureBox1.PointToClient(l.Parent.PointToScreen(l.Location));
@@ -63,6 +64,44 @@ namespace TCPclient
                 }
                 statusLabel.Text = "TWOJA TURA";
             }
+
+            pictureBoxList = new List<PictureBox>();
+            pictureBoxList.Add(fieldImageBox0);
+            pictureBoxList.Add(fieldImageBox1);
+            pictureBoxList.Add(fieldImageBox2);
+            pictureBoxList.Add(fieldImageBox3);
+            pictureBoxList.Add(fieldImageBox4);
+            pictureBoxList.Add(fieldImageBox5);
+            pictureBoxList.Add(fieldImageBox6); 
+            pictureBoxList.Add(fieldImageBox7);
+            pictureBoxList.Add(fieldImageBox8);
+            pictureBoxList.Add(fieldImageBox9);
+            pictureBoxList.Add(fieldImageBox10);
+            pictureBoxList.Add(fieldImageBox11);
+            pictureBoxList.Add(fieldImageBox12);
+            pictureBoxList.Add(fieldImageBox13);
+
+            foreach (PictureBox p in pictureBoxList)
+            {
+                p.Location = pictureBox1.PointToClient(p.Parent.PointToScreen(p.Location));
+                p.Parent = pictureBox1;
+                p.BackColor = Color.Transparent;
+            }
+
+            imageList = new List<Image>();
+
+            imageList.Add(TCPclient.Properties.Resources._00);
+            imageList.Add(TCPclient.Properties.Resources._01);
+            imageList.Add(TCPclient.Properties.Resources._02);
+            imageList.Add(TCPclient.Properties.Resources._03);
+            imageList.Add(TCPclient.Properties.Resources._04);
+            imageList.Add(TCPclient.Properties.Resources._05);
+            imageList.Add(TCPclient.Properties.Resources._06);
+            imageList.Add(TCPclient.Properties.Resources._07);
+            imageList.Add(TCPclient.Properties.Resources._08);
+
+
+            setPictures();
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -172,9 +211,14 @@ namespace TCPclient
                     labelList[i].Enabled = true;
                 }
             }
+            setPictures();
         }
         private void yourMove(int labelIndex)
         {
+            if (labelList[labelIndex].Text == "0")
+            {
+                return;
+            }
             int iMaxValue = Int32.Parse(labelList[labelIndex].Text);
             int labelIndexValue = Int32.Parse(labelList[labelIndex].Text);
             for (int i = 1; i <= iMaxValue; i++)
@@ -266,6 +310,7 @@ namespace TCPclient
                 mainForm.client.Send(Messages.Client.Move + $":{labelIndex}");
             }
             labelList[labelIndex].Text = "0";
+            setPictures();
         }
 
 
@@ -369,7 +414,7 @@ namespace TCPclient
                 }
             }
         }
-
+        
         private void setColorWhite(int labelIndex, int labelTextNumber)
         {
             setAllEnabled();
@@ -387,7 +432,6 @@ namespace TCPclient
                 }
             }
         }
-
         private void setColorBlack(int labelIndex, int labelTextNumber)
         {
             setAllEnabled();
@@ -423,21 +467,18 @@ namespace TCPclient
             int labelNumber = 1;                             
             setColorWhite(labelNumber, textNumber);
         }
-
         private void whiteLabel2_Enter(object sender, EventArgs e)
         {
             int textNumber = Int32.Parse(whiteLabel2.Text);
             int labelNumber = 2;
             setColorWhite(labelNumber, textNumber);
         }
-
         private void whiteLabel3_Enter(object sender, EventArgs e)
         {
             int textNumber = Int32.Parse(whiteLabel3.Text);
             int labelNumber = 3;
             setColorWhite(labelNumber, textNumber);
         }
-
         private void whiteLabel4_Enter(object sender, EventArgs e)
         {
             int textNumber = Int32.Parse(whiteLabel4.Text);
@@ -452,6 +493,8 @@ namespace TCPclient
             setColorWhite(labelNumber,textNumber);
         }
 
+
+
         private void whiteLabel0_Leave(object sender, EventArgs e)
         {
             setAllBlack();
@@ -462,30 +505,28 @@ namespace TCPclient
             setAllBlack();
             setDisabledBlack();
         }
-
         private void whiteLabel2_Leave(object sender, EventArgs e)
         {
             setAllBlack();
             setDisabledBlack();
         }
-
         private void whiteLabel3_Leave(object sender, EventArgs e)
         {
             setAllBlack();
             setDisabledBlack();
         }
-
         private void whiteLabel4_Leave(object sender, EventArgs e)
         {
             setAllBlack();
             setDisabledBlack();
         }
-
         private void whiteLabel5_Leave(object sender, EventArgs e)
         {
             setAllBlack();
             setDisabledBlack();
         }
+
+
 
         private void blackLabel0_Enter(object sender, EventArgs e)
         {
@@ -493,35 +534,30 @@ namespace TCPclient
             int textNumber = Int32.Parse(blackLabel0.Text);
             setColorBlack(labelNumber, textNumber);
         }
-
         private void blackLabel1_Enter(object sender, EventArgs e)
         {
             int labelNumber = 8;
             int textNumber = Int32.Parse(blackLabel1.Text);
             setColorBlack(labelNumber, textNumber);
         }
-
         private void blackLabel2_Enter(object sender, EventArgs e)
         {
             int labelNumber = 9;
             int textNumber = Int32.Parse(blackLabel2.Text);
             setColorBlack(labelNumber, textNumber);
         }
-
         private void blackLabel3_Enter(object sender, EventArgs e)
         {
             int labelNumber = 10;
             int textNumber = Int32.Parse(blackLabel3.Text);
             setColorBlack(labelNumber, textNumber);
         }
-
         private void blackLabel4_Enter(object sender, EventArgs e)
         {
             int labelNumber = 11;
             int textNumber = Int32.Parse(blackLabel4.Text);
             setColorBlack(labelNumber, textNumber);
         }
-
         private void blackLabel5_Enter(object sender, EventArgs e)
         {
             int labelNumber = 12;
@@ -529,40 +565,55 @@ namespace TCPclient
             setColorBlack(labelNumber, textNumber);
         }
 
+
         private void blackLabel0_Leave(object sender, EventArgs e)
         {
             setAllBlack();
             setDisabledWhite();
         }
-
         private void blackLabel1_Leave(object sender, EventArgs e)
         {
             setAllBlack();
             setDisabledWhite();
         }
-
         private void blackLabel2_Leave(object sender, EventArgs e)
         {
             setAllBlack();
             setDisabledWhite();
         }
-
         private void blackLabel3_Leave(object sender, EventArgs e)
         {
             setAllBlack();
             setDisabledWhite();
         }
-
         private void blackLabel4_Leave(object sender, EventArgs e)
         {
             setAllBlack();
             setDisabledWhite();
         }
-
         private void blackLabel5_Leave(object sender, EventArgs e)
         {
             setAllBlack();
             setDisabledWhite();
+        }
+
+       
+
+        private void setPictures()
+        {
+            int index = 0;
+            foreach (PictureBox p in pictureBoxList)
+            {
+                if (Int32.Parse(labelList[index].Text) < 8)
+                {
+                    p.Image = imageList[Int32.Parse(labelList[index].Text)];
+                }
+                else
+                {
+                    p.Image = imageList[8]; 
+                }
+                index++;
+            }
         }
     }
 }

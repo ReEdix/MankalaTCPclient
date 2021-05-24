@@ -45,7 +45,35 @@ namespace TCPclient
             this.blackLabel4 = new System.Windows.Forms.Label();
             this.blackLabel5 = new System.Windows.Forms.Label();
             this.blackLabel6 = new System.Windows.Forms.Label();
+            this.fieldImageBox13 = new System.Windows.Forms.PictureBox();
+            this.fieldImageBox12 = new System.Windows.Forms.PictureBox();
+            this.fieldImageBox11 = new System.Windows.Forms.PictureBox();
+            this.fieldImageBox10 = new System.Windows.Forms.PictureBox();
+            this.fieldImageBox9 = new System.Windows.Forms.PictureBox();
+            this.fieldImageBox8 = new System.Windows.Forms.PictureBox();
+            this.fieldImageBox7 = new System.Windows.Forms.PictureBox();
+            this.fieldImageBox6 = new System.Windows.Forms.PictureBox();
+            this.fieldImageBox5 = new System.Windows.Forms.PictureBox();
+            this.fieldImageBox4 = new System.Windows.Forms.PictureBox();
+            this.fieldImageBox3 = new System.Windows.Forms.PictureBox();
+            this.fieldImageBox2 = new System.Windows.Forms.PictureBox();
+            this.fieldImageBox1 = new System.Windows.Forms.PictureBox();
+            this.fieldImageBox0 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.fieldImageBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fieldImageBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fieldImageBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fieldImageBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fieldImageBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fieldImageBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fieldImageBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fieldImageBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fieldImageBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fieldImageBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fieldImageBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fieldImageBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fieldImageBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fieldImageBox0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -159,7 +187,7 @@ namespace TCPclient
             this.whiteLabel6.AutoSize = true;
             this.whiteLabel6.BackColor = System.Drawing.Color.Transparent;
             this.whiteLabel6.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.whiteLabel6.Location = new System.Drawing.Point(1267, 400);
+            this.whiteLabel6.Location = new System.Drawing.Point(1269, 310);
             this.whiteLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.whiteLabel6.Name = "whiteLabel6";
             this.whiteLabel6.Size = new System.Drawing.Size(38, 40);
@@ -256,12 +284,139 @@ namespace TCPclient
             // 
             this.blackLabel6.AutoSize = true;
             this.blackLabel6.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blackLabel6.Location = new System.Drawing.Point(136, 400);
+            this.blackLabel6.Location = new System.Drawing.Point(152, 310);
             this.blackLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.blackLabel6.Name = "blackLabel6";
             this.blackLabel6.Size = new System.Drawing.Size(38, 40);
             this.blackLabel6.TabIndex = 16;
             this.blackLabel6.Text = "0";
+            // 
+            // fieldImageBox13
+            // 
+            this.fieldImageBox13.Location = new System.Drawing.Point(93, 382);
+            this.fieldImageBox13.Name = "fieldImageBox13";
+            this.fieldImageBox13.Size = new System.Drawing.Size(166, 160);
+            this.fieldImageBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.fieldImageBox13.TabIndex = 30;
+            this.fieldImageBox13.TabStop = false;
+            // 
+            // fieldImageBox12
+            // 
+            this.fieldImageBox12.Location = new System.Drawing.Point(284, 238);
+            this.fieldImageBox12.Name = "fieldImageBox12";
+            this.fieldImageBox12.Size = new System.Drawing.Size(140, 140);
+            this.fieldImageBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.fieldImageBox12.TabIndex = 29;
+            this.fieldImageBox12.TabStop = false;
+            // 
+            // fieldImageBox11
+            // 
+            this.fieldImageBox11.Location = new System.Drawing.Point(430, 238);
+            this.fieldImageBox11.Name = "fieldImageBox11";
+            this.fieldImageBox11.Size = new System.Drawing.Size(142, 140);
+            this.fieldImageBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.fieldImageBox11.TabIndex = 28;
+            this.fieldImageBox11.TabStop = false;
+            // 
+            // fieldImageBox10
+            // 
+            this.fieldImageBox10.Location = new System.Drawing.Point(578, 238);
+            this.fieldImageBox10.Name = "fieldImageBox10";
+            this.fieldImageBox10.Size = new System.Drawing.Size(139, 140);
+            this.fieldImageBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.fieldImageBox10.TabIndex = 27;
+            this.fieldImageBox10.TabStop = false;
+            // 
+            // fieldImageBox9
+            // 
+            this.fieldImageBox9.Location = new System.Drawing.Point(723, 238);
+            this.fieldImageBox9.Name = "fieldImageBox9";
+            this.fieldImageBox9.Size = new System.Drawing.Size(140, 140);
+            this.fieldImageBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.fieldImageBox9.TabIndex = 26;
+            this.fieldImageBox9.TabStop = false;
+            // 
+            // fieldImageBox8
+            // 
+            this.fieldImageBox8.Location = new System.Drawing.Point(869, 238);
+            this.fieldImageBox8.Name = "fieldImageBox8";
+            this.fieldImageBox8.Size = new System.Drawing.Size(137, 140);
+            this.fieldImageBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.fieldImageBox8.TabIndex = 25;
+            this.fieldImageBox8.TabStop = false;
+            // 
+            // fieldImageBox7
+            // 
+            this.fieldImageBox7.Location = new System.Drawing.Point(1012, 238);
+            this.fieldImageBox7.Name = "fieldImageBox7";
+            this.fieldImageBox7.Size = new System.Drawing.Size(134, 140);
+            this.fieldImageBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.fieldImageBox7.TabIndex = 24;
+            this.fieldImageBox7.TabStop = false;
+            // 
+            // fieldImageBox6
+            // 
+            this.fieldImageBox6.Location = new System.Drawing.Point(1205, 382);
+            this.fieldImageBox6.Name = "fieldImageBox6";
+            this.fieldImageBox6.Size = new System.Drawing.Size(167, 160);
+            this.fieldImageBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.fieldImageBox6.TabIndex = 23;
+            this.fieldImageBox6.TabStop = false;
+            // 
+            // fieldImageBox5
+            // 
+            this.fieldImageBox5.Location = new System.Drawing.Point(1022, 442);
+            this.fieldImageBox5.Name = "fieldImageBox5";
+            this.fieldImageBox5.Size = new System.Drawing.Size(124, 148);
+            this.fieldImageBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.fieldImageBox5.TabIndex = 22;
+            this.fieldImageBox5.TabStop = false;
+            // 
+            // fieldImageBox4
+            // 
+            this.fieldImageBox4.Location = new System.Drawing.Point(878, 442);
+            this.fieldImageBox4.Name = "fieldImageBox4";
+            this.fieldImageBox4.Size = new System.Drawing.Size(138, 148);
+            this.fieldImageBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.fieldImageBox4.TabIndex = 21;
+            this.fieldImageBox4.TabStop = false;
+            // 
+            // fieldImageBox3
+            // 
+            this.fieldImageBox3.Location = new System.Drawing.Point(723, 442);
+            this.fieldImageBox3.Name = "fieldImageBox3";
+            this.fieldImageBox3.Size = new System.Drawing.Size(149, 148);
+            this.fieldImageBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.fieldImageBox3.TabIndex = 20;
+            this.fieldImageBox3.TabStop = false;
+            // 
+            // fieldImageBox2
+            // 
+            this.fieldImageBox2.Location = new System.Drawing.Point(578, 442);
+            this.fieldImageBox2.Name = "fieldImageBox2";
+            this.fieldImageBox2.Size = new System.Drawing.Size(139, 148);
+            this.fieldImageBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.fieldImageBox2.TabIndex = 19;
+            this.fieldImageBox2.TabStop = false;
+            // 
+            // fieldImageBox1
+            // 
+            this.fieldImageBox1.Location = new System.Drawing.Point(430, 442);
+            this.fieldImageBox1.Name = "fieldImageBox1";
+            this.fieldImageBox1.Size = new System.Drawing.Size(142, 148);
+            this.fieldImageBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.fieldImageBox1.TabIndex = 18;
+            this.fieldImageBox1.TabStop = false;
+            // 
+            // fieldImageBox0
+            // 
+            this.fieldImageBox0.Image = global::TCPclient.Properties.Resources._00;
+            this.fieldImageBox0.Location = new System.Drawing.Point(284, 442);
+            this.fieldImageBox0.Name = "fieldImageBox0";
+            this.fieldImageBox0.Size = new System.Drawing.Size(140, 148);
+            this.fieldImageBox0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.fieldImageBox0.TabIndex = 17;
+            this.fieldImageBox0.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -279,6 +434,20 @@ namespace TCPclient
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1468, 774);
+            this.Controls.Add(this.fieldImageBox13);
+            this.Controls.Add(this.fieldImageBox12);
+            this.Controls.Add(this.fieldImageBox11);
+            this.Controls.Add(this.fieldImageBox10);
+            this.Controls.Add(this.fieldImageBox9);
+            this.Controls.Add(this.fieldImageBox8);
+            this.Controls.Add(this.fieldImageBox7);
+            this.Controls.Add(this.fieldImageBox6);
+            this.Controls.Add(this.fieldImageBox5);
+            this.Controls.Add(this.fieldImageBox4);
+            this.Controls.Add(this.fieldImageBox3);
+            this.Controls.Add(this.fieldImageBox2);
+            this.Controls.Add(this.fieldImageBox1);
+            this.Controls.Add(this.fieldImageBox0);
             this.Controls.Add(this.blackLabel6);
             this.Controls.Add(this.blackLabel5);
             this.Controls.Add(this.blackLabel4);
@@ -299,6 +468,20 @@ namespace TCPclient
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GameForm";
             this.Text = "GameForm";
+            ((System.ComponentModel.ISupportInitialize)(this.fieldImageBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fieldImageBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fieldImageBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fieldImageBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fieldImageBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fieldImageBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fieldImageBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fieldImageBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fieldImageBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fieldImageBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fieldImageBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fieldImageBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fieldImageBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fieldImageBox0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -324,5 +507,19 @@ namespace TCPclient
         private System.Windows.Forms.Label blackLabel4;
         private System.Windows.Forms.Label blackLabel5;
         private System.Windows.Forms.Label blackLabel6;
+        private System.Windows.Forms.PictureBox fieldImageBox0;
+        private System.Windows.Forms.PictureBox fieldImageBox1;
+        private System.Windows.Forms.PictureBox fieldImageBox2;
+        private System.Windows.Forms.PictureBox fieldImageBox3;
+        private System.Windows.Forms.PictureBox fieldImageBox4;
+        private System.Windows.Forms.PictureBox fieldImageBox5;
+        private System.Windows.Forms.PictureBox fieldImageBox6;
+        private System.Windows.Forms.PictureBox fieldImageBox7;
+        private System.Windows.Forms.PictureBox fieldImageBox8;
+        private System.Windows.Forms.PictureBox fieldImageBox9;
+        private System.Windows.Forms.PictureBox fieldImageBox10;
+        private System.Windows.Forms.PictureBox fieldImageBox11;
+        private System.Windows.Forms.PictureBox fieldImageBox12;
+        private System.Windows.Forms.PictureBox fieldImageBox13;
     }
 }

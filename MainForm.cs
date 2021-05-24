@@ -2,6 +2,7 @@
 using System;
 using System.Text;
 using System.Windows.Forms;
+using System.Linq;
 
 namespace TCPclient
 {
@@ -19,15 +20,11 @@ namespace TCPclient
         {
             client = new SimpleTcpClient("127.0.0.1:8001");
             client.Events.Connected += Events_Connected;
-            client.Events.DataReceived += Events_DataReceived;
-            client.Connect();
+            client.Events.DataReceived += Events_DataReceived;          
         }
 
         private void Events_DataReceived(object sender, DataReceivedEventArgs e)
         {
-            this.Invoke((MethodInvoker)delegate {
-                serverText.Text = Encoding.UTF8.GetString(e.Data);
-                });
 
             switch(Encoding.UTF8.GetString(e.Data).Split(':')[0])
             {
@@ -46,24 +43,104 @@ namespace TCPclient
                     break;
                 case Messages.Server.Cancel:
                     break;
+                case Messages.Server.Disconnect:
+                    MessageBox.Show("Błędny login lub hasło", "Login ERROR");
+                    client.Disconnect();
+                    loginFormsVisible(true);
+                    break;
+                case Messages.Server.Matches:
+                    this.Invoke((MethodInvoker)delegate {
+
+                        String[] matches = Encoding.UTF8.GetString(e.Data).Split(':');
+                        listBoxMatches.Items.Clear();
+
+                        for(int i=1; i<matches.Length; i+=2)
+                        {
+                            listBoxMatches.Items.Add($"{matches[i]}:{matches[i+1]}");
+                        }
+                    });
+                    break;
+                case Messages.Server.Logged:
+                    MessageBox.Show("Taki gracz jest już zalogowany", "Login ERROR");
+                    client.Disconnect();
+                    loginFormsVisible(true);
+                    break;
             }
         }
 
         private void Events_Connected(object sender, ClientConnectedEventArgs e)
         {
-            this.Invoke((MethodInvoker)delegate {
-                serverText.Text = "Połączono z serverem";
-            });
+ 
         }
 
         private void joinButton_Click(object sender, EventArgs e)
         {
-            client.Send(Messages.Client.Join);
+            client.Send($"{Messages.Client.Join}:{listBoxMatches.SelectedItem.ToString()}");
         }
 
         private void hostButton_Click(object sender, EventArgs e)
         {
             client.Send(Messages.Client.Host);
+        }
+
+        private void connectButton_Click(object sender, EventArgs e)
+        {
+            if(connectButton.Text.Equals("Wyloguj"))
+            {
+                client.Disconnect();
+                loginFormsVisible(true);
+                return;
+            }
+
+            if(textBoxLogin.Text.Contains(":") || textBoxPassword.Text.Contains(":"))
+            {
+                MessageBox.Show("Login i hasło nie mogą zawierać znaku dwukropka  -> : <-", "Input Error");
+                return;
+            }
+
+            client.Connect();
+            client.Send($"{Messages.Client.Login}:{textBoxLogin.Text}:{textBoxPassword.Text}");
+
+            loginFormsVisible(false);
+
+        }
+
+        private void loginFormsVisible(bool visible)
+        {
+            this.Invoke((MethodInvoker)delegate
+            {
+                if (connectButton.Text.Equals("Wyloguj")) 
+                {
+                    connectButton.Text = "Zaloguj";
+                }
+                else
+                {
+                    connectButton.Text = "Wyloguj";
+                }
+            });
+            this.Invoke((MethodInvoker)delegate
+            {
+                textBoxLogin.Visible = visible;
+                textBoxPassword.Visible = visible;
+                buttonRegister.Visible = visible;
+                labelLogin.Visible = visible;
+                labelPassword.Visible = visible;
+
+                buttonRefresh.Enabled = !visible;
+                hostButton.Enabled = !visible;
+                joinButton.Enabled = !visible;
+            });
+        }
+
+        private void buttonRegister_Click(object sender, EventArgs e)
+        {
+            client.Connect();
+            client.Send($"{Messages.Client.Register}:{textBoxLogin.Text}:{textBoxPassword.Text}");
+        }
+
+        private void buttonRefresh_Click(object sender, EventArgs e)
+        {
+            client.Send(Messages.Server.Matches);
         }
     }
 }
