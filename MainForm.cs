@@ -65,6 +65,34 @@ namespace TCPclient
                     client.Disconnect();
                     loginFormsVisible(true);
                     break;
+                case Messages.Server.Winner:
+                    MessageBox.Show("Wygrał gracz - " + Encoding.UTF8.GetString(e.Data).Split(':')[3], "Koniec Gry");
+                    
+                    gameForm.Invoke((MethodInvoker)delegate
+                    {
+                        gameForm.Close();
+                    });
+                    this.Invoke((MethodInvoker)delegate
+                    {
+                        this.Show();
+                    });
+                    gameForm = null;
+                    client.Send(Messages.Client.SaveGame + ":" + Encoding.UTF8.GetString(e.Data).Split(':')[1] +
+                        ":" + Encoding.UTF8.GetString(e.Data).Split(':')[2] +
+                        ":" + Encoding.UTF8.GetString(e.Data).Split(':')[3]);
+                    break;
+                case Messages.Server.Lost:
+                    MessageBox.Show("Wygrał gracz - " + Encoding.UTF8.GetString(e.Data).Split(':')[1], "Koniec Gry");
+                    gameForm.Invoke((MethodInvoker)delegate
+                    {
+                        gameForm.Close();
+                    });
+                    this.Invoke((MethodInvoker)delegate
+                    {
+                        this.Show();
+                    });
+                    gameForm = null;
+                    break;
             }
         }
 

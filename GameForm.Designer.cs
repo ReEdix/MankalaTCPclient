@@ -60,6 +60,7 @@ namespace TCPclient
             this.fieldImageBox1 = new System.Windows.Forms.PictureBox();
             this.fieldImageBox0 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ending_game = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.fieldImageBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fieldImageBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fieldImageBox11)).BeginInit();
@@ -429,11 +430,22 @@ namespace TCPclient
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // ending_game
+            // 
+            this.ending_game.Location = new System.Drawing.Point(412, 32);
+            this.ending_game.Name = "ending_game";
+            this.ending_game.Size = new System.Drawing.Size(201, 39);
+            this.ending_game.TabIndex = 32;
+            this.ending_game.Text = "Ending game";
+            this.ending_game.UseVisualStyleBackColor = true;
+            this.ending_game.Click += new System.EventHandler(this.ending_game_click);
+            // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1468, 774);
+            this.Controls.Add(this.ending_game);
             this.Controls.Add(this.fieldImageBox13);
             this.Controls.Add(this.fieldImageBox12);
             this.Controls.Add(this.fieldImageBox11);
@@ -521,5 +533,6 @@ namespace TCPclient
         private System.Windows.Forms.PictureBox fieldImageBox11;
         private System.Windows.Forms.PictureBox fieldImageBox12;
         private System.Windows.Forms.PictureBox fieldImageBox13;
+        private System.Windows.Forms.Button ending_game;
     }
 }

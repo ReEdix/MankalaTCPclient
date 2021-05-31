@@ -212,9 +212,12 @@ namespace TCPclient
                 }
             }
             setPictures();
+            checkEndGameWhite();
+            checkEndGameBlack();
         }
         private void yourMove(int labelIndex)
         {
+          
             if (labelList[labelIndex].Text == "0")
             {
                 return;
@@ -264,6 +267,7 @@ namespace TCPclient
                             }
                         }
                     }
+                    
                 }
                 //###CAPTURE###
 
@@ -311,6 +315,9 @@ namespace TCPclient
             }
             labelList[labelIndex].Text = "0";
             setPictures();
+
+            checkEndGameWhite();
+            checkEndGameBlack();
         }
 
 
@@ -440,7 +447,15 @@ namespace TCPclient
             {
                 if (i % 14 == 6)
                 {
-                    labelList[i].ForeColor = Color.Black;
+                    if (i > 14)
+                    {
+                        labelList[14-(14-(i%14))].ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        labelList[i].ForeColor = Color.Black;
+                    }
+                    
                     maxValue++;
                 }
                 else
@@ -614,6 +629,51 @@ namespace TCPclient
                 }
                 index++;
             }
+        }
+
+        private void endingGame()
+        {
+            if(Int32.Parse(whiteLabel6.Text) > Int32.Parse(blackLabel6.Text))
+            {
+                mainForm.client.Send(Messages.Client.EndGame + ":WHITE");
+            }
+            else
+            {
+                mainForm.client.Send(Messages.Client.EndGame + ":BLACK");
+            }
+            
+        }
+
+        private void checkEndGameWhite()
+        {
+            int count = 0;
+            for(int i = 0; i <= 5; i++)
+            {
+                if (labelList[i].Text == "0") 
+                count++;
+            }
+            if (count == 6)
+            {
+                endingGame();
+            }
+        }
+        private void checkEndGameBlack()
+        {
+            int count = 0;
+            for (int i = 7; i <= 12; i++)
+            {
+                if (labelList[i].Text == "0") 
+                count++;
+            }
+            if (count == 6)
+            {
+                endingGame();
+            }
+        }
+
+        private void ending_game_click(object sender, EventArgs e)
+        {
+            endingGame();
         }
     }
 }
