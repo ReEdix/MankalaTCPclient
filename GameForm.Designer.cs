@@ -45,6 +45,7 @@ namespace TCPclient
             this.blackLabel4 = new System.Windows.Forms.Label();
             this.blackLabel5 = new System.Windows.Forms.Label();
             this.blackLabel6 = new System.Windows.Forms.Label();
+            this.ending_game = new System.Windows.Forms.Button();
             this.fieldImageBox13 = new System.Windows.Forms.PictureBox();
             this.fieldImageBox12 = new System.Windows.Forms.PictureBox();
             this.fieldImageBox11 = new System.Windows.Forms.PictureBox();
@@ -60,7 +61,6 @@ namespace TCPclient
             this.fieldImageBox1 = new System.Windows.Forms.PictureBox();
             this.fieldImageBox0 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ending_game = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.fieldImageBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fieldImageBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fieldImageBox11)).BeginInit();
@@ -80,10 +80,10 @@ namespace TCPclient
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(16, 27);
-            this.exitButton.Margin = new System.Windows.Forms.Padding(4);
+            this.exitButton.Image = global::TCPclient.Properties.Resources.game_background;
+            this.exitButton.Location = new System.Drawing.Point(12, 22);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(100, 28);
+            this.exitButton.Size = new System.Drawing.Size(75, 23);
             this.exitButton.TabIndex = 1;
             this.exitButton.Text = "EXIT";
             this.exitButton.UseVisualStyleBackColor = true;
@@ -92,21 +92,21 @@ namespace TCPclient
             // statusLabel
             // 
             this.statusLabel.AutoSize = true;
-            this.statusLabel.Location = new System.Drawing.Point(140, 27);
-            this.statusLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.statusLabel.BackColor = System.Drawing.Color.Transparent;
+            this.statusLabel.Location = new System.Drawing.Point(105, 22);
             this.statusLabel.Name = "statusLabel";
-            this.statusLabel.Size = new System.Drawing.Size(190, 17);
+            this.statusLabel.Size = new System.Drawing.Size(150, 13);
             this.statusLabel.TabIndex = 2;
             this.statusLabel.Text = "CZEKANIE NA ZAWARTOŚĆ";
             // 
             // whiteLabel0
             // 
             this.whiteLabel0.AutoSize = true;
+            this.whiteLabel0.BackColor = System.Drawing.Color.Transparent;
             this.whiteLabel0.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.whiteLabel0.Location = new System.Drawing.Point(347, 678);
-            this.whiteLabel0.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.whiteLabel0.Location = new System.Drawing.Point(260, 551);
             this.whiteLabel0.Name = "whiteLabel0";
-            this.whiteLabel0.Size = new System.Drawing.Size(37, 40);
+            this.whiteLabel0.Size = new System.Drawing.Size(31, 32);
             this.whiteLabel0.TabIndex = 3;
             this.whiteLabel0.Text = "4";
             this.whiteLabel0.Click += new System.EventHandler(this.whiteLabel0_Click);
@@ -116,11 +116,11 @@ namespace TCPclient
             // whiteLabel1
             // 
             this.whiteLabel1.AutoSize = true;
+            this.whiteLabel1.BackColor = System.Drawing.Color.Transparent;
             this.whiteLabel1.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.whiteLabel1.Location = new System.Drawing.Point(481, 678);
-            this.whiteLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.whiteLabel1.Location = new System.Drawing.Point(361, 551);
             this.whiteLabel1.Name = "whiteLabel1";
-            this.whiteLabel1.Size = new System.Drawing.Size(37, 40);
+            this.whiteLabel1.Size = new System.Drawing.Size(31, 32);
             this.whiteLabel1.TabIndex = 4;
             this.whiteLabel1.Text = "4";
             this.whiteLabel1.Click += new System.EventHandler(this.whiteLabel1_Click);
@@ -130,11 +130,11 @@ namespace TCPclient
             // whiteLabel2
             // 
             this.whiteLabel2.AutoSize = true;
+            this.whiteLabel2.BackColor = System.Drawing.Color.Transparent;
             this.whiteLabel2.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.whiteLabel2.Location = new System.Drawing.Point(620, 678);
-            this.whiteLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.whiteLabel2.Location = new System.Drawing.Point(465, 551);
             this.whiteLabel2.Name = "whiteLabel2";
-            this.whiteLabel2.Size = new System.Drawing.Size(37, 40);
+            this.whiteLabel2.Size = new System.Drawing.Size(31, 32);
             this.whiteLabel2.TabIndex = 5;
             this.whiteLabel2.Text = "4";
             this.whiteLabel2.Click += new System.EventHandler(this.whiteLabel2_Click);
@@ -144,11 +144,11 @@ namespace TCPclient
             // whiteLabel3
             // 
             this.whiteLabel3.AutoSize = true;
+            this.whiteLabel3.BackColor = System.Drawing.Color.Transparent;
             this.whiteLabel3.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.whiteLabel3.Location = new System.Drawing.Point(776, 678);
-            this.whiteLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.whiteLabel3.Location = new System.Drawing.Point(582, 551);
             this.whiteLabel3.Name = "whiteLabel3";
-            this.whiteLabel3.Size = new System.Drawing.Size(37, 40);
+            this.whiteLabel3.Size = new System.Drawing.Size(31, 32);
             this.whiteLabel3.TabIndex = 6;
             this.whiteLabel3.Text = "4";
             this.whiteLabel3.Click += new System.EventHandler(this.whiteLabel3_Click);
@@ -158,11 +158,11 @@ namespace TCPclient
             // whiteLabel4
             // 
             this.whiteLabel4.AutoSize = true;
+            this.whiteLabel4.BackColor = System.Drawing.Color.Transparent;
             this.whiteLabel4.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.whiteLabel4.Location = new System.Drawing.Point(921, 678);
-            this.whiteLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.whiteLabel4.Location = new System.Drawing.Point(691, 551);
             this.whiteLabel4.Name = "whiteLabel4";
-            this.whiteLabel4.Size = new System.Drawing.Size(37, 40);
+            this.whiteLabel4.Size = new System.Drawing.Size(31, 32);
             this.whiteLabel4.TabIndex = 7;
             this.whiteLabel4.Text = "4";
             this.whiteLabel4.Click += new System.EventHandler(this.whiteLabel4_Click);
@@ -172,11 +172,11 @@ namespace TCPclient
             // whiteLabel5
             // 
             this.whiteLabel5.AutoSize = true;
+            this.whiteLabel5.BackColor = System.Drawing.Color.Transparent;
             this.whiteLabel5.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.whiteLabel5.Location = new System.Drawing.Point(1068, 678);
-            this.whiteLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.whiteLabel5.Location = new System.Drawing.Point(801, 551);
             this.whiteLabel5.Name = "whiteLabel5";
-            this.whiteLabel5.Size = new System.Drawing.Size(37, 40);
+            this.whiteLabel5.Size = new System.Drawing.Size(31, 32);
             this.whiteLabel5.TabIndex = 8;
             this.whiteLabel5.Text = "4";
             this.whiteLabel5.Click += new System.EventHandler(this.whiteLabel5_Click);
@@ -186,23 +186,22 @@ namespace TCPclient
             // whiteLabel6
             // 
             this.whiteLabel6.AutoSize = true;
-            this.whiteLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.whiteLabel6.BackColor = System.Drawing.SystemColors.Control;
             this.whiteLabel6.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.whiteLabel6.Location = new System.Drawing.Point(1269, 310);
-            this.whiteLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.whiteLabel6.Location = new System.Drawing.Point(952, 252);
             this.whiteLabel6.Name = "whiteLabel6";
-            this.whiteLabel6.Size = new System.Drawing.Size(38, 40);
+            this.whiteLabel6.Size = new System.Drawing.Size(32, 32);
             this.whiteLabel6.TabIndex = 9;
             this.whiteLabel6.Text = "0";
             // 
             // blackLabel0
             // 
             this.blackLabel0.AutoSize = true;
+            this.blackLabel0.BackColor = System.Drawing.Color.Transparent;
             this.blackLabel0.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blackLabel0.Location = new System.Drawing.Point(1068, 134);
-            this.blackLabel0.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.blackLabel0.Location = new System.Drawing.Point(801, 109);
             this.blackLabel0.Name = "blackLabel0";
-            this.blackLabel0.Size = new System.Drawing.Size(37, 40);
+            this.blackLabel0.Size = new System.Drawing.Size(31, 32);
             this.blackLabel0.TabIndex = 10;
             this.blackLabel0.Text = "4";
             this.blackLabel0.Click += new System.EventHandler(this.blackLabel0_Click);
@@ -212,11 +211,11 @@ namespace TCPclient
             // blackLabel1
             // 
             this.blackLabel1.AutoSize = true;
+            this.blackLabel1.BackColor = System.Drawing.Color.Transparent;
             this.blackLabel1.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blackLabel1.Location = new System.Drawing.Point(921, 134);
-            this.blackLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.blackLabel1.Location = new System.Drawing.Point(691, 109);
             this.blackLabel1.Name = "blackLabel1";
-            this.blackLabel1.Size = new System.Drawing.Size(37, 40);
+            this.blackLabel1.Size = new System.Drawing.Size(31, 32);
             this.blackLabel1.TabIndex = 11;
             this.blackLabel1.Text = "4";
             this.blackLabel1.Click += new System.EventHandler(this.blackLabel1_Click);
@@ -226,11 +225,11 @@ namespace TCPclient
             // blackLabel2
             // 
             this.blackLabel2.AutoSize = true;
+            this.blackLabel2.BackColor = System.Drawing.Color.Transparent;
             this.blackLabel2.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blackLabel2.Location = new System.Drawing.Point(776, 134);
-            this.blackLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.blackLabel2.Location = new System.Drawing.Point(582, 109);
             this.blackLabel2.Name = "blackLabel2";
-            this.blackLabel2.Size = new System.Drawing.Size(37, 40);
+            this.blackLabel2.Size = new System.Drawing.Size(31, 32);
             this.blackLabel2.TabIndex = 12;
             this.blackLabel2.Text = "4";
             this.blackLabel2.Click += new System.EventHandler(this.blackLabel2_Click);
@@ -240,11 +239,11 @@ namespace TCPclient
             // blackLabel3
             // 
             this.blackLabel3.AutoSize = true;
+            this.blackLabel3.BackColor = System.Drawing.Color.Transparent;
             this.blackLabel3.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blackLabel3.Location = new System.Drawing.Point(620, 134);
-            this.blackLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.blackLabel3.Location = new System.Drawing.Point(465, 109);
             this.blackLabel3.Name = "blackLabel3";
-            this.blackLabel3.Size = new System.Drawing.Size(37, 40);
+            this.blackLabel3.Size = new System.Drawing.Size(31, 32);
             this.blackLabel3.TabIndex = 13;
             this.blackLabel3.Text = "4";
             this.blackLabel3.Click += new System.EventHandler(this.blackLabel3_Click);
@@ -254,12 +253,12 @@ namespace TCPclient
             // blackLabel4
             // 
             this.blackLabel4.AutoSize = true;
+            this.blackLabel4.BackColor = System.Drawing.Color.Transparent;
             this.blackLabel4.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.blackLabel4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.blackLabel4.Location = new System.Drawing.Point(481, 134);
-            this.blackLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.blackLabel4.Location = new System.Drawing.Point(361, 109);
             this.blackLabel4.Name = "blackLabel4";
-            this.blackLabel4.Size = new System.Drawing.Size(37, 40);
+            this.blackLabel4.Size = new System.Drawing.Size(31, 32);
             this.blackLabel4.TabIndex = 14;
             this.blackLabel4.Text = "4";
             this.blackLabel4.Click += new System.EventHandler(this.blackLabel4_Click);
@@ -271,10 +270,9 @@ namespace TCPclient
             this.blackLabel5.AutoSize = true;
             this.blackLabel5.BackColor = System.Drawing.Color.Transparent;
             this.blackLabel5.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blackLabel5.Location = new System.Drawing.Point(347, 134);
-            this.blackLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.blackLabel5.Location = new System.Drawing.Point(260, 109);
             this.blackLabel5.Name = "blackLabel5";
-            this.blackLabel5.Size = new System.Drawing.Size(37, 40);
+            this.blackLabel5.Size = new System.Drawing.Size(31, 32);
             this.blackLabel5.TabIndex = 15;
             this.blackLabel5.Text = "4";
             this.blackLabel5.Click += new System.EventHandler(this.blackLabel5_Click);
@@ -285,166 +283,180 @@ namespace TCPclient
             // 
             this.blackLabel6.AutoSize = true;
             this.blackLabel6.Font = new System.Drawing.Font("Stencil", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blackLabel6.Location = new System.Drawing.Point(152, 310);
-            this.blackLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.blackLabel6.Location = new System.Drawing.Point(114, 252);
             this.blackLabel6.Name = "blackLabel6";
-            this.blackLabel6.Size = new System.Drawing.Size(38, 40);
+            this.blackLabel6.Size = new System.Drawing.Size(32, 32);
             this.blackLabel6.TabIndex = 16;
             this.blackLabel6.Text = "0";
             // 
+            // ending_game
+            // 
+            this.ending_game.Location = new System.Drawing.Point(309, 26);
+            this.ending_game.Margin = new System.Windows.Forms.Padding(2);
+            this.ending_game.Name = "ending_game";
+            this.ending_game.Size = new System.Drawing.Size(151, 32);
+            this.ending_game.TabIndex = 32;
+            this.ending_game.Text = "Ending game";
+            this.ending_game.UseVisualStyleBackColor = true;
+            this.ending_game.Click += new System.EventHandler(this.ending_game_click);
+            // 
             // fieldImageBox13
             // 
-            this.fieldImageBox13.Location = new System.Drawing.Point(93, 382);
+            this.fieldImageBox13.Location = new System.Drawing.Point(70, 310);
+            this.fieldImageBox13.Margin = new System.Windows.Forms.Padding(2);
             this.fieldImageBox13.Name = "fieldImageBox13";
-            this.fieldImageBox13.Size = new System.Drawing.Size(166, 160);
+            this.fieldImageBox13.Size = new System.Drawing.Size(124, 130);
             this.fieldImageBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.fieldImageBox13.TabIndex = 30;
             this.fieldImageBox13.TabStop = false;
             // 
             // fieldImageBox12
             // 
-            this.fieldImageBox12.Location = new System.Drawing.Point(284, 238);
+            this.fieldImageBox12.Location = new System.Drawing.Point(213, 193);
+            this.fieldImageBox12.Margin = new System.Windows.Forms.Padding(2);
             this.fieldImageBox12.Name = "fieldImageBox12";
-            this.fieldImageBox12.Size = new System.Drawing.Size(140, 140);
+            this.fieldImageBox12.Size = new System.Drawing.Size(105, 114);
             this.fieldImageBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.fieldImageBox12.TabIndex = 29;
             this.fieldImageBox12.TabStop = false;
             // 
             // fieldImageBox11
             // 
-            this.fieldImageBox11.Location = new System.Drawing.Point(430, 238);
+            this.fieldImageBox11.Location = new System.Drawing.Point(322, 193);
+            this.fieldImageBox11.Margin = new System.Windows.Forms.Padding(2);
             this.fieldImageBox11.Name = "fieldImageBox11";
-            this.fieldImageBox11.Size = new System.Drawing.Size(142, 140);
+            this.fieldImageBox11.Size = new System.Drawing.Size(106, 114);
             this.fieldImageBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.fieldImageBox11.TabIndex = 28;
             this.fieldImageBox11.TabStop = false;
             // 
             // fieldImageBox10
             // 
-            this.fieldImageBox10.Location = new System.Drawing.Point(578, 238);
+            this.fieldImageBox10.Location = new System.Drawing.Point(434, 193);
+            this.fieldImageBox10.Margin = new System.Windows.Forms.Padding(2);
             this.fieldImageBox10.Name = "fieldImageBox10";
-            this.fieldImageBox10.Size = new System.Drawing.Size(139, 140);
+            this.fieldImageBox10.Size = new System.Drawing.Size(104, 114);
             this.fieldImageBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.fieldImageBox10.TabIndex = 27;
             this.fieldImageBox10.TabStop = false;
             // 
             // fieldImageBox9
             // 
-            this.fieldImageBox9.Location = new System.Drawing.Point(723, 238);
+            this.fieldImageBox9.Location = new System.Drawing.Point(542, 193);
+            this.fieldImageBox9.Margin = new System.Windows.Forms.Padding(2);
             this.fieldImageBox9.Name = "fieldImageBox9";
-            this.fieldImageBox9.Size = new System.Drawing.Size(140, 140);
+            this.fieldImageBox9.Size = new System.Drawing.Size(105, 114);
             this.fieldImageBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.fieldImageBox9.TabIndex = 26;
             this.fieldImageBox9.TabStop = false;
             // 
             // fieldImageBox8
             // 
-            this.fieldImageBox8.Location = new System.Drawing.Point(869, 238);
+            this.fieldImageBox8.Location = new System.Drawing.Point(652, 193);
+            this.fieldImageBox8.Margin = new System.Windows.Forms.Padding(2);
             this.fieldImageBox8.Name = "fieldImageBox8";
-            this.fieldImageBox8.Size = new System.Drawing.Size(137, 140);
+            this.fieldImageBox8.Size = new System.Drawing.Size(103, 114);
             this.fieldImageBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.fieldImageBox8.TabIndex = 25;
             this.fieldImageBox8.TabStop = false;
             // 
             // fieldImageBox7
             // 
-            this.fieldImageBox7.Location = new System.Drawing.Point(1012, 238);
+            this.fieldImageBox7.Location = new System.Drawing.Point(759, 193);
+            this.fieldImageBox7.Margin = new System.Windows.Forms.Padding(2);
             this.fieldImageBox7.Name = "fieldImageBox7";
-            this.fieldImageBox7.Size = new System.Drawing.Size(134, 140);
+            this.fieldImageBox7.Size = new System.Drawing.Size(100, 114);
             this.fieldImageBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.fieldImageBox7.TabIndex = 24;
             this.fieldImageBox7.TabStop = false;
             // 
             // fieldImageBox6
             // 
-            this.fieldImageBox6.Location = new System.Drawing.Point(1205, 382);
+            this.fieldImageBox6.Location = new System.Drawing.Point(904, 310);
+            this.fieldImageBox6.Margin = new System.Windows.Forms.Padding(2);
             this.fieldImageBox6.Name = "fieldImageBox6";
-            this.fieldImageBox6.Size = new System.Drawing.Size(167, 160);
+            this.fieldImageBox6.Size = new System.Drawing.Size(125, 130);
             this.fieldImageBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.fieldImageBox6.TabIndex = 23;
             this.fieldImageBox6.TabStop = false;
             // 
             // fieldImageBox5
             // 
-            this.fieldImageBox5.Location = new System.Drawing.Point(1022, 442);
+            this.fieldImageBox5.Location = new System.Drawing.Point(766, 359);
+            this.fieldImageBox5.Margin = new System.Windows.Forms.Padding(2);
             this.fieldImageBox5.Name = "fieldImageBox5";
-            this.fieldImageBox5.Size = new System.Drawing.Size(124, 148);
+            this.fieldImageBox5.Size = new System.Drawing.Size(93, 120);
             this.fieldImageBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.fieldImageBox5.TabIndex = 22;
             this.fieldImageBox5.TabStop = false;
             // 
             // fieldImageBox4
             // 
-            this.fieldImageBox4.Location = new System.Drawing.Point(878, 442);
+            this.fieldImageBox4.Location = new System.Drawing.Point(658, 359);
+            this.fieldImageBox4.Margin = new System.Windows.Forms.Padding(2);
             this.fieldImageBox4.Name = "fieldImageBox4";
-            this.fieldImageBox4.Size = new System.Drawing.Size(138, 148);
+            this.fieldImageBox4.Size = new System.Drawing.Size(104, 120);
             this.fieldImageBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.fieldImageBox4.TabIndex = 21;
             this.fieldImageBox4.TabStop = false;
             // 
             // fieldImageBox3
             // 
-            this.fieldImageBox3.Location = new System.Drawing.Point(723, 442);
+            this.fieldImageBox3.Location = new System.Drawing.Point(542, 359);
+            this.fieldImageBox3.Margin = new System.Windows.Forms.Padding(2);
             this.fieldImageBox3.Name = "fieldImageBox3";
-            this.fieldImageBox3.Size = new System.Drawing.Size(149, 148);
+            this.fieldImageBox3.Size = new System.Drawing.Size(112, 120);
             this.fieldImageBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.fieldImageBox3.TabIndex = 20;
             this.fieldImageBox3.TabStop = false;
             // 
             // fieldImageBox2
             // 
-            this.fieldImageBox2.Location = new System.Drawing.Point(578, 442);
+            this.fieldImageBox2.Location = new System.Drawing.Point(434, 359);
+            this.fieldImageBox2.Margin = new System.Windows.Forms.Padding(2);
             this.fieldImageBox2.Name = "fieldImageBox2";
-            this.fieldImageBox2.Size = new System.Drawing.Size(139, 148);
+            this.fieldImageBox2.Size = new System.Drawing.Size(104, 120);
             this.fieldImageBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.fieldImageBox2.TabIndex = 19;
             this.fieldImageBox2.TabStop = false;
             // 
             // fieldImageBox1
             // 
-            this.fieldImageBox1.Location = new System.Drawing.Point(430, 442);
+            this.fieldImageBox1.Location = new System.Drawing.Point(322, 359);
+            this.fieldImageBox1.Margin = new System.Windows.Forms.Padding(2);
             this.fieldImageBox1.Name = "fieldImageBox1";
-            this.fieldImageBox1.Size = new System.Drawing.Size(142, 148);
+            this.fieldImageBox1.Size = new System.Drawing.Size(106, 120);
             this.fieldImageBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.fieldImageBox1.TabIndex = 18;
             this.fieldImageBox1.TabStop = false;
             // 
             // fieldImageBox0
             // 
-            this.fieldImageBox0.Image = global::TCPclient.Properties.Resources._00;
-            this.fieldImageBox0.Location = new System.Drawing.Point(284, 442);
+            this.fieldImageBox0.Location = new System.Drawing.Point(213, 359);
+            this.fieldImageBox0.Margin = new System.Windows.Forms.Padding(2);
             this.fieldImageBox0.Name = "fieldImageBox0";
-            this.fieldImageBox0.Size = new System.Drawing.Size(140, 148);
+            this.fieldImageBox0.Size = new System.Drawing.Size(105, 120);
             this.fieldImageBox0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.fieldImageBox0.TabIndex = 17;
             this.fieldImageBox0.TabStop = false;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::TCPclient.Properties.Resources.mankala;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 78);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 63);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1431, 682);
+            this.pictureBox1.Size = new System.Drawing.Size(1073, 554);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // ending_game
-            // 
-            this.ending_game.Location = new System.Drawing.Point(412, 32);
-            this.ending_game.Name = "ending_game";
-            this.ending_game.Size = new System.Drawing.Size(201, 39);
-            this.ending_game.TabIndex = 32;
-            this.ending_game.Text = "Ending game";
-            this.ending_game.UseVisualStyleBackColor = true;
-            this.ending_game.Click += new System.EventHandler(this.ending_game_click);
-            // 
             // GameForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1468, 774);
+            this.BackgroundImage = global::TCPclient.Properties.Resources.game_background;
+            this.ClientSize = new System.Drawing.Size(1101, 629);
             this.Controls.Add(this.ending_game);
             this.Controls.Add(this.fieldImageBox13);
             this.Controls.Add(this.fieldImageBox12);
@@ -477,9 +489,10 @@ namespace TCPclient
             this.Controls.Add(this.statusLabel);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "GameForm";
             this.Text = "GameForm";
+            this.Load += new System.EventHandler(this.GameForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fieldImageBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fieldImageBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fieldImageBox11)).EndInit();

@@ -47,6 +47,8 @@ namespace TCPclient
                 l.BackColor = Color.Transparent;
             }
 
+            pictureBox1.Parent = this;
+
             if (playerColor.Equals("BLACK"))
             {
                 foreach (Label l in labelList)
@@ -212,8 +214,7 @@ namespace TCPclient
                 }
             }
             setPictures();
-            checkEndGameWhite();
-            checkEndGameBlack();
+
         }
         private void yourMove(int labelIndex)
         {
@@ -316,8 +317,8 @@ namespace TCPclient
             labelList[labelIndex].Text = "0";
             setPictures();
 
-            checkEndGameWhite();
-            checkEndGameBlack();
+            checkEndGame();
+
         }
 
 
@@ -644,7 +645,7 @@ namespace TCPclient
             
         }
 
-        private void checkEndGameWhite()
+        private void checkEndGame()
         {
             int count = 0;
             for(int i = 0; i <= 5; i++)
@@ -655,15 +656,14 @@ namespace TCPclient
             if (count == 6)
             {
                 endingGame();
+                return;
             }
-        }
-        private void checkEndGameBlack()
-        {
-            int count = 0;
+
+            count = 0;
             for (int i = 7; i <= 12; i++)
             {
-                if (labelList[i].Text == "0") 
-                count++;
+                if (labelList[i].Text == "0")
+                    count++;
             }
             if (count == 6)
             {
@@ -674,6 +674,11 @@ namespace TCPclient
         private void ending_game_click(object sender, EventArgs e)
         {
             endingGame();
+        }
+
+        private void GameForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

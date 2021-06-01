@@ -43,23 +43,28 @@ namespace TCPclient
             // 
             // hostButton
             // 
+            this.hostButton.BackColor = System.Drawing.SystemColors.Window;
             this.hostButton.Enabled = false;
-            this.hostButton.Location = new System.Drawing.Point(16, 16);
-            this.hostButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.hostButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.hostButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.hostButton.Image = global::TCPclient.Properties.Resources.game_background;
+            this.hostButton.Location = new System.Drawing.Point(12, 13);
             this.hostButton.Name = "hostButton";
-            this.hostButton.Size = new System.Drawing.Size(100, 28);
+            this.hostButton.Size = new System.Drawing.Size(75, 23);
             this.hostButton.TabIndex = 0;
             this.hostButton.Text = "Hostuj";
-            this.hostButton.UseVisualStyleBackColor = true;
+            this.hostButton.UseVisualStyleBackColor = false;
             this.hostButton.Click += new System.EventHandler(this.hostButton_Click);
             // 
             // joinButton
             // 
             this.joinButton.Enabled = false;
-            this.joinButton.Location = new System.Drawing.Point(16, 52);
-            this.joinButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.joinButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.joinButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.joinButton.Image = global::TCPclient.Properties.Resources.game_background;
+            this.joinButton.Location = new System.Drawing.Point(12, 42);
             this.joinButton.Name = "joinButton";
-            this.joinButton.Size = new System.Drawing.Size(100, 28);
+            this.joinButton.Size = new System.Drawing.Size(75, 23);
             this.joinButton.TabIndex = 2;
             this.joinButton.Text = "Dołącz";
             this.joinButton.UseVisualStyleBackColor = true;
@@ -67,20 +72,22 @@ namespace TCPclient
             // 
             // listBoxMatches
             // 
+            this.listBoxMatches.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.listBoxMatches.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listBoxMatches.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.listBoxMatches.FormattingEnabled = true;
-            this.listBoxMatches.ItemHeight = 16;
-            this.listBoxMatches.Location = new System.Drawing.Point(139, 16);
-            this.listBoxMatches.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBoxMatches.Location = new System.Drawing.Point(104, 13);
             this.listBoxMatches.Name = "listBoxMatches";
-            this.listBoxMatches.Size = new System.Drawing.Size(288, 308);
+            this.listBoxMatches.Size = new System.Drawing.Size(217, 249);
             this.listBoxMatches.TabIndex = 3;
             // 
             // connectButton
             // 
-            this.connectButton.Location = new System.Drawing.Point(16, 272);
-            this.connectButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.connectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.connectButton.Image = global::TCPclient.Properties.Resources.game_background;
+            this.connectButton.Location = new System.Drawing.Point(12, 221);
             this.connectButton.Name = "connectButton";
-            this.connectButton.Size = new System.Drawing.Size(100, 28);
+            this.connectButton.Size = new System.Drawing.Size(75, 23);
             this.connectButton.TabIndex = 4;
             this.connectButton.Text = "Zaloguj";
             this.connectButton.UseVisualStyleBackColor = true;
@@ -89,10 +96,11 @@ namespace TCPclient
             // buttonRefresh
             // 
             this.buttonRefresh.Enabled = false;
-            this.buttonRefresh.Location = new System.Drawing.Point(17, 89);
-            this.buttonRefresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRefresh.Image = global::TCPclient.Properties.Resources.game_background;
+            this.buttonRefresh.Location = new System.Drawing.Point(13, 72);
             this.buttonRefresh.Name = "buttonRefresh";
-            this.buttonRefresh.Size = new System.Drawing.Size(100, 28);
+            this.buttonRefresh.Size = new System.Drawing.Size(75, 23);
             this.buttonRefresh.TabIndex = 5;
             this.buttonRefresh.Text = "Odśwież";
             this.buttonRefresh.UseVisualStyleBackColor = true;
@@ -100,27 +108,25 @@ namespace TCPclient
             // 
             // textBoxLogin
             // 
-            this.textBoxLogin.Location = new System.Drawing.Point(16, 192);
-            this.textBoxLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxLogin.Location = new System.Drawing.Point(12, 156);
             this.textBoxLogin.Name = "textBoxLogin";
-            this.textBoxLogin.Size = new System.Drawing.Size(100, 22);
+            this.textBoxLogin.Size = new System.Drawing.Size(76, 20);
             this.textBoxLogin.TabIndex = 6;
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(16, 240);
-            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxPassword.Location = new System.Drawing.Point(12, 195);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(99, 22);
+            this.textBoxPassword.Size = new System.Drawing.Size(75, 20);
             this.textBoxPassword.TabIndex = 7;
             // 
             // labelLogin
             // 
             this.labelLogin.AutoSize = true;
-            this.labelLogin.Location = new System.Drawing.Point(16, 167);
-            this.labelLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelLogin.BackColor = System.Drawing.Color.Transparent;
+            this.labelLogin.Location = new System.Drawing.Point(12, 136);
             this.labelLogin.Name = "labelLogin";
-            this.labelLogin.Size = new System.Drawing.Size(38, 20);
+            this.labelLogin.Size = new System.Drawing.Size(32, 17);
             this.labelLogin.TabIndex = 8;
             this.labelLogin.Text = "Login";
             this.labelLogin.UseCompatibleTextRendering = true;
@@ -128,19 +134,20 @@ namespace TCPclient
             // labelPassword
             // 
             this.labelPassword.AutoSize = true;
-            this.labelPassword.Location = new System.Drawing.Point(16, 220);
-            this.labelPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelPassword.BackColor = System.Drawing.Color.Transparent;
+            this.labelPassword.Location = new System.Drawing.Point(12, 179);
             this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(44, 17);
+            this.labelPassword.Size = new System.Drawing.Size(36, 13);
             this.labelPassword.TabIndex = 9;
             this.labelPassword.Text = "Hasło";
             // 
             // buttonRegister
             // 
-            this.buttonRegister.Location = new System.Drawing.Point(17, 309);
-            this.buttonRegister.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRegister.Image = global::TCPclient.Properties.Resources.game_background;
+            this.buttonRegister.Location = new System.Drawing.Point(13, 251);
             this.buttonRegister.Name = "buttonRegister";
-            this.buttonRegister.Size = new System.Drawing.Size(100, 28);
+            this.buttonRegister.Size = new System.Drawing.Size(75, 23);
             this.buttonRegister.TabIndex = 10;
             this.buttonRegister.Text = "Zarejestruj";
             this.buttonRegister.UseVisualStyleBackColor = true;
@@ -148,10 +155,11 @@ namespace TCPclient
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(444, 345);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.BackgroundImage = global::TCPclient.Properties.Resources.game_background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(333, 280);
             this.Controls.Add(this.buttonRegister);
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelLogin);
@@ -162,9 +170,8 @@ namespace TCPclient
             this.Controls.Add(this.listBoxMatches);
             this.Controls.Add(this.joinButton);
             this.Controls.Add(this.hostButton);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MainForm";
-            this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
