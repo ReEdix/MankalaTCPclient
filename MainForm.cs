@@ -126,6 +126,10 @@ namespace TCPclient
 
         private void joinButton_Click(object sender, EventArgs e)
         {
+            if(listBoxMatches.SelectedItem == null)
+            {
+                return;
+            }
             client.Send($"{Messages.Client.Join}:{listBoxMatches.SelectedItem.ToString()}");
         }
 
@@ -176,6 +180,7 @@ namespace TCPclient
             {
                 if (connectButton.Text.Equals("Wyloguj")) 
                 {
+                    listBoxMatches.Items.Clear();
                     connectButton.Text = "Zaloguj";
                 }
                 else
@@ -193,7 +198,7 @@ namespace TCPclient
 
                 buttonRefresh.Enabled = !visible;
                 hostButton.Enabled = !visible;
-                joinButton.Enabled = !visible;
+                joinButton.Enabled = false;
             });
         }
 
@@ -206,6 +211,21 @@ namespace TCPclient
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
             client.Send(Messages.Server.Matches);
+        }
+
+        private void listBoxMatches_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBoxMatches.SelectedItem == null)
+            {
+                joinButton.Enabled = false;
+            }
+            else
+            {
+                if (buttonRefresh.Enabled)
+                { 
+                    joinButton.Enabled = true;
+                }
+            }
         }
     }
 }

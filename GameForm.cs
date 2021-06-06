@@ -318,7 +318,7 @@ namespace TCPclient
             setPictures();
 
             checkEndGame();
-
+            
         }
 
 
@@ -641,8 +641,7 @@ namespace TCPclient
             else
             {
                 mainForm.client.Send(Messages.Client.EndGame + ":BLACK");
-            }
-            
+            }          
         }
 
         private void checkEndGame()
@@ -678,7 +677,6 @@ namespace TCPclient
 
         private void GameForm_Load(object sender, EventArgs e)
         {
-
         }
     }
 }
