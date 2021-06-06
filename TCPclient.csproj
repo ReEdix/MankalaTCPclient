@@ -130,5 +130,8 @@
   <ItemGroup>
     <None Include="Properties\Images\game_background.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\gameRulesP.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

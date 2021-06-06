@@ -3,6 +3,7 @@ using System;
 using System.Text;
 using System.Windows.Forms;
 using System.Linq;
+using System.Drawing;
 
 namespace TCPclient
 {
@@ -14,7 +15,6 @@ namespace TCPclient
         public MainForm()
         {
             InitializeComponent();
-            
         }
 
 
@@ -22,7 +22,8 @@ namespace TCPclient
         {
             client = new SimpleTcpClient("127.0.0.1:8001");
             client.Events.Connected += Events_Connected;
-            client.Events.DataReceived += Events_DataReceived;          
+            client.Events.DataReceived += Events_DataReceived;
+            gameRulesPB.Visible = false;
         }
 
         private void Events_DataReceived(object sender, DataReceivedEventArgs e)
@@ -206,6 +207,23 @@ namespace TCPclient
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
             client.Send(Messages.Server.Matches);
+        }
+
+        private void gameRulesButton_Click(object sender, EventArgs e)
+        {
+            if (gameRulesButton.Text == "Zasady")
+            {
+                gameRulesPB.Visible = true;
+                gameRulesButton.Font = new Font("Microsoft Sans Serif", 9);
+                gameRulesButton.Text = "Lista graczy";
+            }
+            else
+            {
+                gameRulesPB.Visible = false;
+                gameRulesButton.Font = new Font("Microsoft Sans Serif", 11);
+                gameRulesButton.Text = "Zasady";
+            }
+            
         }
     }
 }

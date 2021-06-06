@@ -163,6 +163,16 @@ namespace TCPclient.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gameRulesP {
+            get {
+                object obj = ResourceManager.GetObject("gameRulesP", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mankala {
             get {
                 object obj = ResourceManager.GetObject("mankala", resourceCulture);

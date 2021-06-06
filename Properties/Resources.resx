@@ -133,6 +133,9 @@
   <data name="05" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Images\05.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="game_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\game_background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="07" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Images\07.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -148,7 +151,7 @@
   <data name="03" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Images\03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="game_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Images\game_background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="gameRulesP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\gameRulesP.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

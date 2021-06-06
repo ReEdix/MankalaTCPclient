@@ -401,7 +401,7 @@ namespace TCPclient
             }
         }
 
-        private void setDisabledBlack()
+        private void setBlackDisabled()
         {
             foreach (Label l in labelList)
             {
@@ -411,8 +411,18 @@ namespace TCPclient
                 }
             }
         }
+        private void setBlackEnabled()
+        {
+            foreach (Label l in labelList)
+            {
+                if (l.Name.Substring(0, 5) == "black")
+                {
+                    l.Enabled = true;
+                }
+            }
+        }
 
-        private void setDisabledWhite()
+        private void setWhiteDisabled()
         {
             foreach (Label l in labelList)
             {
@@ -422,10 +432,20 @@ namespace TCPclient
                 }
             }
         }
-        
+        private void setWhiteEnabled()
+        {
+            foreach (Label l in labelList)
+            {
+                if (l.Name.Substring(0, 5) == "white")
+                {
+                    l.Enabled = true;
+                }
+            }
+        }
+
         private void setColorWhite(int labelIndex, int labelTextNumber)
         {
-            setAllEnabled();
+            setWhiteEnabled();
             int maxValue = labelIndex + labelTextNumber;
             for (int i = labelIndex+1; i <= maxValue; i++)
             {
@@ -436,13 +456,14 @@ namespace TCPclient
                 }
                 else
                 {
-                    labelList[i%14].ForeColor = System.Drawing.ColorTranslator.FromHtml("#00CF91");
+                    labelList[i % 14].Enabled = true;
+                    labelList[i%14].ForeColor = System.Drawing.ColorTranslator.FromHtml("#00ff00");
                 }
             }
         }
         private void setColorBlack(int labelIndex, int labelTextNumber)
         {
-            setAllEnabled();
+            setBlackEnabled();
             int maxValue = labelIndex + labelTextNumber;
             for (int i = labelIndex + 1; i <= maxValue; i++)
             {
@@ -461,7 +482,8 @@ namespace TCPclient
                 }
                 else
                 {
-                    labelList[i % 14].ForeColor = System.Drawing.ColorTranslator.FromHtml("#00CF91");
+                    labelList[i % 14].Enabled = true;
+                    labelList[i % 14].ForeColor = System.Drawing.ColorTranslator.FromHtml("#00ff00");
                 }
             }
         }
@@ -519,27 +541,27 @@ namespace TCPclient
         private void whiteLabel1_Leave(object sender, EventArgs e)
         {
             setAllBlack();
-            setDisabledBlack();
+            setBlackDisabled();
         }
         private void whiteLabel2_Leave(object sender, EventArgs e)
         {
             setAllBlack();
-            setDisabledBlack();
+            setBlackDisabled();
         }
         private void whiteLabel3_Leave(object sender, EventArgs e)
         {
             setAllBlack();
-            setDisabledBlack();
+            setBlackDisabled();
         }
         private void whiteLabel4_Leave(object sender, EventArgs e)
         {
             setAllBlack();
-            setDisabledBlack();
+            setBlackDisabled();
         }
         private void whiteLabel5_Leave(object sender, EventArgs e)
         {
             setAllBlack();
-            setDisabledBlack();
+            setBlackDisabled();
         }
 
 
@@ -585,32 +607,32 @@ namespace TCPclient
         private void blackLabel0_Leave(object sender, EventArgs e)
         {
             setAllBlack();
-            setDisabledWhite();
+            setWhiteDisabled();
         }
         private void blackLabel1_Leave(object sender, EventArgs e)
         {
             setAllBlack();
-            setDisabledWhite();
+            setWhiteDisabled();
         }
         private void blackLabel2_Leave(object sender, EventArgs e)
         {
             setAllBlack();
-            setDisabledWhite();
+            setWhiteDisabled();
         }
         private void blackLabel3_Leave(object sender, EventArgs e)
         {
             setAllBlack();
-            setDisabledWhite();
+            setWhiteDisabled();
         }
         private void blackLabel4_Leave(object sender, EventArgs e)
         {
             setAllBlack();
-            setDisabledWhite();
+            setWhiteDisabled();
         }
         private void blackLabel5_Leave(object sender, EventArgs e)
         {
             setAllBlack();
-            setDisabledWhite();
+            setWhiteDisabled();
         }
 
        
