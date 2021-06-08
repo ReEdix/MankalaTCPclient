@@ -35,6 +35,7 @@ namespace TCPclient
                     this.Invoke((MethodInvoker)delegate {
                         this.Hide();
                         gameForm = new GameForm(Encoding.UTF8.GetString(e.Data).Split(':')[1], this);
+                        gameForm.Text = this.Text;
                         gameForm.Show();
                     });
                     break;
@@ -83,39 +84,37 @@ namespace TCPclient
                     });
                     break;
                 case Messages.Server.Winner:
-                    MessageBox.Show("Wygrał gracz - " + Encoding.UTF8.GetString(e.Data).Split(':')[3], "Koniec Gry");
-                    
-                    this.gameForm.Invoke((MethodInvoker)delegate
-                    {
-                        gameForm.Close();
-                    });
+
                     this.Invoke((MethodInvoker)delegate
                     {
+                        gameForm.Close();
                         this.Show();
                         this.joinButton.Enabled = true;
                         this.buttonRefresh.Enabled = true;
-                        this.client.Send(Messages.Server.Cancel);
                     });
                     client.Send(Messages.Client.SaveGame + ":" + Encoding.UTF8.GetString(e.Data).Split(':')[1] +
                         ":" + Encoding.UTF8.GetString(e.Data).Split(':')[2] +
                         ":" + Encoding.UTF8.GetString(e.Data).Split(':')[3]);
+                    MessageBox.Show("Wygrał gracz - " + Encoding.UTF8.GetString(e.Data).Split(':')[3], "Koniec Gry");
                     break;
-                case Messages.Server.Lost:
-                    MessageBox.Show("Wygrał gracz - " + Encoding.UTF8.GetString(e.Data).Split(':')[1], "Koniec Gry");
-                    this.gameForm.Invoke((MethodInvoker)delegate
-                    {
-                        if(gameForm != null)
-                        {
-                            gameForm.Close();
-                        }                      
-                    });
+                case Messages.Server.Lost:            
                     this.Invoke((MethodInvoker)delegate
                     {
                         this.Show();
                         this.joinButton.Enabled = true;
                         this.buttonRefresh.Enabled = true;
                         this.client.Send(Messages.Server.Cancel);
+                        
                     });
+
+                    this.Invoke((MethodInvoker)delegate
+                    {
+                        
+                         gameForm.Close();
+                        
+                    });
+                    MessageBox.Show("Przegrana! Wygrał gracz - " + Encoding.UTF8.GetString(e.Data).Split(':')[1], "Koniec Gry");
+                    
                     break;
             }
         }
@@ -127,6 +126,10 @@ namespace TCPclient
 
         private void joinButton_Click(object sender, EventArgs e)
         {
+            if(listBoxMatches.SelectedItem == null)
+            {
+                return;
+            }
             client.Send($"{Messages.Client.Join}:{listBoxMatches.SelectedItem.ToString()}");
         }
 
@@ -164,6 +167,20 @@ namespace TCPclient
                 return;
             }
 
+            if (textBoxLogin.Text.Equals("") || textBoxPassword.Text.Equals(""))
+            {
+                MessageBox.Show("Login i hasło nie mogą być puste");
+                this.Text = " ";
+                return;
+            }
+
+            if (textBoxLogin.Text.Contains(" ") || textBoxPassword.Text.Contains(" "))
+            {
+                MessageBox.Show("Login i hasło nie mogą zawierać znaku spacji");
+                this.Text = " ";
+                return;
+            }
+
             client.Connect();
             client.Send($"{Messages.Client.Login}:{textBoxLogin.Text}:{textBoxPassword.Text}");
             this.Text = textBoxLogin.Text;
@@ -177,6 +194,7 @@ namespace TCPclient
             {
                 if (connectButton.Text.Equals("Wyloguj")) 
                 {
+                    listBoxMatches.Items.Clear();
                     connectButton.Text = "Zaloguj";
                 }
                 else
@@ -194,12 +212,34 @@ namespace TCPclient
 
                 buttonRefresh.Enabled = !visible;
                 hostButton.Enabled = !visible;
-                joinButton.Enabled = !visible;
+                joinButton.Enabled = false;
             });
         }
 
         private void buttonRegister_Click(object sender, EventArgs e)
         {
+            if (textBoxLogin.Text.Contains(":") || textBoxPassword.Text.Contains(":"))
+            {
+                MessageBox.Show("Login i hasło nie mogą zawierać znaku dwukropka  -> : <-", "Input Error");
+                this.Text = " ";
+                return;
+            }
+
+            if (textBoxLogin.Text.Equals("") || textBoxPassword.Text.Equals(""))
+            {
+                MessageBox.Show("Login i hasło nie mogą być puste");
+                this.Text = " ";
+                return;
+            }
+
+            if (textBoxLogin.Text.Contains(" ") || textBoxPassword.Text.Contains(" "))
+            {
+                MessageBox.Show("Login i hasło nie mogą zawierać znaku spacji");
+                this.Text = " ";
+                return;
+            }
+
+
             client.Connect();
             client.Send($"{Messages.Client.Register}:{textBoxLogin.Text}:{textBoxPassword.Text}");
         }
@@ -207,6 +247,21 @@ namespace TCPclient
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
             client.Send(Messages.Server.Matches);
+        }
+
+        private void listBoxMatches_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBoxMatches.SelectedItem == null)
+            {
+                joinButton.Enabled = false;
+            }
+            else
+            {
+                if (buttonRefresh.Enabled)
+                { 
+                    joinButton.Enabled = true;
+                }
+            }
         }
 
         private void gameRulesButton_Click(object sender, EventArgs e)

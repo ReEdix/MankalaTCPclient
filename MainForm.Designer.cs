@@ -85,6 +85,7 @@ namespace TCPclient
             this.listBoxMatches.Name = "listBoxMatches";
             this.listBoxMatches.Size = new System.Drawing.Size(773, 502);
             this.listBoxMatches.TabIndex = 3;
+            this.listBoxMatches.SelectedIndexChanged += new System.EventHandler(this.listBoxMatches_SelectedIndexChanged);
             // 
             // connectButton
             // 

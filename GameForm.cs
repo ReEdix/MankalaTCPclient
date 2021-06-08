@@ -106,9 +106,10 @@ namespace TCPclient
             setPictures();
         }
 
-        private void exitButton_Click(object sender, EventArgs e)
+        private void surrenderButton_Click(object sender, EventArgs e)
         {
-            mainForm.client.Send(Messages.Client.Exit);
+            mainForm.client.Send(Messages.Client.Surrender);
+            surrenderButton.Enabled = false;
         }
         public void enemyMoveFromServer(int labelIndex)
         {
@@ -318,7 +319,7 @@ namespace TCPclient
             setPictures();
 
             checkEndGame();
-
+            
         }
 
 
@@ -663,8 +664,7 @@ namespace TCPclient
             else
             {
                 mainForm.client.Send(Messages.Client.EndGame + ":BLACK");
-            }
-            
+            }          
         }
 
         private void checkEndGame()
@@ -700,7 +700,6 @@ namespace TCPclient
 
         private void GameForm_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

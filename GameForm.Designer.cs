@@ -29,7 +29,7 @@ namespace TCPclient
         /// </summary>
         private void InitializeComponent()
         {
-            this.exitButton = new System.Windows.Forms.Button();
+            this.surrenderButton = new System.Windows.Forms.Button();
             this.statusLabel = new System.Windows.Forms.Label();
             this.whiteLabel0 = new System.Windows.Forms.Label();
             this.whiteLabel1 = new System.Windows.Forms.Label();
@@ -78,16 +78,16 @@ namespace TCPclient
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // exitButton
+            // surrenderButton
             // 
-            this.exitButton.Image = global::TCPclient.Properties.Resources.game_background;
-            this.exitButton.Location = new System.Drawing.Point(12, 22);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(75, 23);
-            this.exitButton.TabIndex = 1;
-            this.exitButton.Text = "EXIT";
-            this.exitButton.UseVisualStyleBackColor = true;
-            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            this.surrenderButton.Image = global::TCPclient.Properties.Resources.game_background;
+            this.surrenderButton.Location = new System.Drawing.Point(12, 22);
+            this.surrenderButton.Name = "surrenderButton";
+            this.surrenderButton.Size = new System.Drawing.Size(75, 23);
+            this.surrenderButton.TabIndex = 1;
+            this.surrenderButton.Text = "PODDANIE";
+            this.surrenderButton.UseVisualStyleBackColor = true;
+            this.surrenderButton.Click += new System.EventHandler(this.surrenderButton_Click);
             // 
             // statusLabel
             // 
@@ -443,6 +443,7 @@ namespace TCPclient
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = global::TCPclient.Properties.Resources.mankala;
             this.pictureBox1.Location = new System.Drawing.Point(12, 63);
             this.pictureBox1.Name = "pictureBox1";
@@ -456,6 +457,7 @@ namespace TCPclient
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TCPclient.Properties.Resources.game_background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1101, 629);
             this.Controls.Add(this.ending_game);
             this.Controls.Add(this.fieldImageBox13);
@@ -487,7 +489,7 @@ namespace TCPclient
             this.Controls.Add(this.whiteLabel1);
             this.Controls.Add(this.whiteLabel0);
             this.Controls.Add(this.statusLabel);
-            this.Controls.Add(this.exitButton);
+            this.Controls.Add(this.surrenderButton);
             this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "GameForm";
@@ -516,7 +518,7 @@ namespace TCPclient
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Button surrenderButton;
         public System.Windows.Forms.Label statusLabel;
         private System.Windows.Forms.Label whiteLabel0;
         private System.Windows.Forms.Label whiteLabel1;
