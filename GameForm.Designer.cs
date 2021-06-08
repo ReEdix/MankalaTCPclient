@@ -45,7 +45,6 @@ namespace TCPclient
             this.blackLabel4 = new System.Windows.Forms.Label();
             this.blackLabel5 = new System.Windows.Forms.Label();
             this.blackLabel6 = new System.Windows.Forms.Label();
-            this.ending_game = new System.Windows.Forms.Button();
             this.fieldImageBox13 = new System.Windows.Forms.PictureBox();
             this.fieldImageBox12 = new System.Windows.Forms.PictureBox();
             this.fieldImageBox11 = new System.Windows.Forms.PictureBox();
@@ -289,17 +288,6 @@ namespace TCPclient
             this.blackLabel6.TabIndex = 16;
             this.blackLabel6.Text = "0";
             // 
-            // ending_game
-            // 
-            this.ending_game.Location = new System.Drawing.Point(309, 26);
-            this.ending_game.Margin = new System.Windows.Forms.Padding(2);
-            this.ending_game.Name = "ending_game";
-            this.ending_game.Size = new System.Drawing.Size(151, 32);
-            this.ending_game.TabIndex = 32;
-            this.ending_game.Text = "Ending game";
-            this.ending_game.UseVisualStyleBackColor = true;
-            this.ending_game.Click += new System.EventHandler(this.ending_game_click);
-            // 
             // fieldImageBox13
             // 
             this.fieldImageBox13.Location = new System.Drawing.Point(70, 310);
@@ -459,7 +447,6 @@ namespace TCPclient
             this.BackgroundImage = global::TCPclient.Properties.Resources.game_background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1101, 629);
-            this.Controls.Add(this.ending_game);
             this.Controls.Add(this.fieldImageBox13);
             this.Controls.Add(this.fieldImageBox12);
             this.Controls.Add(this.fieldImageBox11);
@@ -548,6 +535,5 @@ namespace TCPclient
         private System.Windows.Forms.PictureBox fieldImageBox11;
         private System.Windows.Forms.PictureBox fieldImageBox12;
         private System.Windows.Forms.PictureBox fieldImageBox13;
-        private System.Windows.Forms.Button ending_game;
     }
 }
